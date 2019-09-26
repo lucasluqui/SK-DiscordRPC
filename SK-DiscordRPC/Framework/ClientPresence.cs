@@ -85,7 +85,6 @@ namespace SK_DiscordRPC.Framework
                 {
                     state = "Knight: [hidden]";
                 }
-                state = "Knight: " + Parser.parseKnightName();
                 set(detail, state, largeImageKey, largeImageDesc);
             }
         }
