@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DiscordRPC;
 using DiscordRPC.Logging;
+using SK_DiscordRPC.Util;
 using SK_DiscordRPC.Data;
 using SK_DiscordRPC.Framework;
 
@@ -24,13 +25,21 @@ namespace SK_DiscordRPC
     {
         public static DiscordRpcClient client;
         public static Whereabout curWhere = new Whereabout();
-        private Timer ticker;
+        private Timer presenceTicker;
+        private Timer gameTicker;
         private string CLIENT_ID = "626524043209867274";
 
         public AppWindow()
         {
             InitializeComponent();
-            SetupRPC();
+            if(Parser.isGameRunning())
+            {
+                SetupRPC();
+            }
+            else
+            {
+                InitGameTicker();
+            }
         }
 
         public void SetupRPC()
@@ -56,17 +65,36 @@ namespace SK_DiscordRPC
                     LargeImageText = ""
                 }
             });
-            InitTicker();
-        }
-        public void InitTicker()
-        {
-            int interval = 5;
-            ticker = new Timer(interval * 1000);
-            ticker.Elapsed += OnTimedEvent;
-            ticker.Enabled = true;
+
+            if(gameTicker.Enabled) { gameTicker.Dispose(); }
+            InitPresenceTicker();
         }
 
-        private void OnTimedEvent(object sender, EventArgs e)
+        public void InitGameTicker()
+        {
+            int interval = 5;
+            gameTicker = new Timer(interval * 1000);
+            gameTicker.Elapsed += OnGameTimedEvent;
+            gameTicker.Enabled = true;
+        }
+
+        public void InitPresenceTicker()
+        {
+            int interval = 5;
+            presenceTicker = new Timer(interval * 1000);
+            presenceTicker.Elapsed += OnPresenceTimedEvent;
+            presenceTicker.Enabled = true;
+        }
+
+        private void OnGameTimedEvent(object sender, EventArgs e)
+        {
+            if (Parser.isGameRunning())
+            {
+                SetupRPC();
+            }
+        }
+
+        private void OnPresenceTimedEvent(object sender, EventArgs e)
         {
             ClientPresence.update();
         }

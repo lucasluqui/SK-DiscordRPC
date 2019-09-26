@@ -57,5 +57,18 @@ namespace SK_DiscordRPC.Util
             return knightName;
         }
 
+        public static bool isGameRunning()
+        {
+            bool running = false;
+            Process[] processlist = Process.GetProcesses();
+            foreach (Process process in processlist)
+            {
+                if (!String.IsNullOrEmpty(process.MainWindowTitle) && process.MainWindowTitle.Contains("Spiral Knights"))
+                {
+                    running = true;
+                }
+            }
+            return running;
+        }
     }
 }
