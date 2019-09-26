@@ -110,5 +110,11 @@ namespace SK_DiscordRPC
             }
         }
 
+        private void AppWindow_OnExit(object sender, ExitEventArgs e)
+        {
+            client.Deinitialize();
+            client.Dispose();
+        }
+
     }
 }
