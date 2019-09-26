@@ -103,11 +103,33 @@ namespace SK_DiscordRPC.Framework
                         largeImageKey = ImageCodes.IMAGE_TORTODRONES;
                         largeImageDesc = "March of the Tortodrones";
                         break;
-                    default:
-                        detail = AppWindow.curWhere.getLocDetail();
-                        largeImageKey = AppWindow.curWhere.getLargeImageKey();
-                        largeImageDesc = AppWindow.curWhere.getLargeImageDesc();
+                    case IdentCodes.IDENT_DREAMS_AND_NIGHTMARES:
+                        detail = "In Dreams and Nightmares";
+                        largeImageKey = ImageCodes.IMAGE_DREAMS_AND_NIGHTMARES;
+                        largeImageDesc = "Dreams and Nightmares";
                         break;
+                    case IdentCodes.IDENT_MOORCROFT_MANOR:
+                        detail = "In Moorcroft Manor";
+                        largeImageKey = ImageCodes.IMAGE_MOORCROFT_MANOR;
+                        largeImageDesc = "Moorcroft Manor";
+                        break;
+                    case IdentCodes.IDENT_EMBERLIGHT:
+                        detail = "In Emberlight";
+                        largeImageKey = ImageCodes.IMAGE_EMBERLIGHT;
+                        largeImageDesc = "Emberlight";
+                        break;
+                    case IdentCodes.IDENT_THE_CORE:
+                        detail = "In The Core";
+                        largeImageKey = ImageCodes.IMAGE_THE_CORE;
+                        largeImageDesc = "The Core";
+                        break;
+                    case IdentCodes.IDENT_GUILDHALL:
+                        detail = "In a Guildhall";
+                        largeImageKey = ImageCodes.IMAGE_GUILDHALL;
+                        largeImageDesc = "A Guildhall";
+                        break;
+                    default:
+                        return;
                 }
                 if (!AppContext.HIDE_KNIGHT)
                 {

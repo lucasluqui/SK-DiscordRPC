@@ -29,7 +29,7 @@ namespace SK_DiscordRPC.Data
 
         public void setLargeImageDesc(string desc)
         {
-            this.loc_largeImageKey = desc;
+            this.loc_largeImageDesc = desc;
         }
 
         public string getIdent()

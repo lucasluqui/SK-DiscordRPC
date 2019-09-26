@@ -25,5 +25,9 @@ namespace SK_DiscordRPC.Data
         public const String IDENT_DREAMS_AND_NIGHTMARES = "2:485";
         public const String IDENT_ROTTING_METRO = "2:266";
         public const String IDENT_ROTTING_METRO_EX = "2:264";
+        public const String IDENT_MOORCROFT_MANOR = "2:351";
+        public const String IDENT_EMBERLIGHT = "2:344";
+        public const String IDENT_THE_CORE = "";
+        public const String IDENT_GUILDHALL = "4:4";
     }
 }
