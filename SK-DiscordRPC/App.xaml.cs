@@ -7,10 +7,12 @@ using System.Windows;
 
 namespace SK_DiscordRPC
 {
-    /// <summary>
-    /// Lógica de interacción para App.xaml
-    /// </summary>
     public partial class App : Application
     {
+        private void AppWindow_OnExit(object sender, ExitEventArgs e)
+        {
+            AppWindow.client.Deinitialize();
+            AppWindow.client.Dispose();
+        }
     }
 }
