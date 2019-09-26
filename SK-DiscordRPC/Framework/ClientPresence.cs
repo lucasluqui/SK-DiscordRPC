@@ -77,6 +77,14 @@ namespace SK_DiscordRPC.Framework
                     default:
                         break;
                 }
+                if (!AppContext.HIDE_KNIGHT)
+                {
+                    state = "Knight: " + Parser.parseKnightName();
+                }
+                else
+                {
+                    state = "Knight: [hidden]";
+                }
                 state = "Knight: " + Parser.parseKnightName();
                 set(detail, state, largeImageKey, largeImageDesc);
             }
