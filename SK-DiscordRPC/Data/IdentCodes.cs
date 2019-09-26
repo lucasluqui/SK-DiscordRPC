@@ -16,11 +16,11 @@ namespace SK_DiscordRPC.Data
         public const String IDENT_MISSION_LOBBY = "2:346";
         public const String IDENT_DANGER_MISSION_LOBBY = "2:417";
         public const String IDENT_FIRESTORM_CITADEL = "2:255";
-        public const String IDENT_TORTODRONES_LOBBY = "2:463";
         public const String IDENT_ARCADE_STARTPOINT = "2:343";
         public const String IDENT_OCH = "2:347";
         public const String IDENT_MUNITIONS_FACTORY = "2:314";
         public const String IDENT_JELLY_PALACE = "2:244";
         public const String IDENT_GLOAMING_WILDWOODS = "2:375";
+        public const String IDENT_TORTODRONES_LOBBY = "2:463";
     }
 }

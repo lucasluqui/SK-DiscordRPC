@@ -59,6 +59,11 @@ namespace SK_DiscordRPC.Framework
                         largeImageKey = ImageCodes.IMAGE_HAVEN;
                         largeImageDesc = "Arcade";
                         break;
+                    case IdentCodes.IDENT_GARRISON:
+                        detail = "In Garrison";
+                        largeImageKey = ImageCodes.IMAGE_HAVEN;
+                        largeImageDesc = "Garrison";
+                        break;
                     case IdentCodes.IDENT_MISSION_LOBBY:
                         detail = "In a Mission";
                         largeImageKey = ImageCodes.IMAGE_MISSION;
@@ -69,10 +74,35 @@ namespace SK_DiscordRPC.Framework
                         largeImageKey = ImageCodes.IMAGE_MISSION;
                         largeImageDesc = "Danger Mission";
                         break;
+                    case IdentCodes.IDENT_GLOAMING_WILDWOODS:
+                        detail = "In GWW";
+                        largeImageKey = ImageCodes.IMAGE_GLOAMING_WILDWOODS;
+                        largeImageDesc = "Gloaming Wildwoods";
+                        break;
+                    case IdentCodes.IDENT_JELLY_PALACE:
+                        detail = "In RJP";
+                        largeImageKey = ImageCodes.IMAGE_JELLY_PALACE;
+                        largeImageDesc = "Royal Jelly Palace";
+                        break;
+                    case IdentCodes.IDENT_MUNITIONS_FACTORY:
+                        detail = "In IMF";
+                        largeImageKey = ImageCodes.IMAGE_MUNITIONS_FACTORY;
+                        largeImageDesc = "Iron Munitions Factory";
+                        break;
                     case IdentCodes.IDENT_FIRESTORM_CITADEL:
                         detail = "In FSC";
                         largeImageKey = ImageCodes.IMAGE_FIRESTORM_CITADEL;
                         largeImageDesc = "Firestorm Citadel";
+                        break;
+                    case IdentCodes.IDENT_OCH:
+                        detail = "In OCH";
+                        largeImageKey = ImageCodes.IMAGE_OCH;
+                        largeImageDesc = "Operation Crimson Hammer";
+                        break;
+                    case IdentCodes.IDENT_TORTODRONES_LOBBY:
+                        detail = "In March of the Tortodrones";
+                        largeImageKey = ImageCodes.IMAGE_TORTODRONES;
+                        largeImageDesc = "March of the Tortodrones";
                         break;
                     default:
                         break;
