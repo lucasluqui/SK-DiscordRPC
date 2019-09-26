@@ -59,6 +59,7 @@ namespace SK_DiscordRPC
             {
                 Details = "",
                 State = "",
+                Timestamps = Timestamps.Now,
                 Assets = new Assets()
                 {
                     LargeImageKey = "",
@@ -103,6 +104,8 @@ namespace SK_DiscordRPC
             else
             {
                 presenceTicker.Dispose();
+                client.Deinitialize();
+                client.Dispose();
                 InitGameTicker();
             }
         }
