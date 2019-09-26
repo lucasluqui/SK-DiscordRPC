@@ -35,7 +35,6 @@ namespace SK_DiscordRPC.Framework
             Whereabout where = Parser.parseWhereabout();
             if(where.getIdent() != AppWindow.curWhere.getIdent())
             {
-                AppWindow.curWhere = where;
                 switch (where.getIdent())
                 {
                     case IdentCodes.IDENT_READY_ROOM:
@@ -105,6 +104,9 @@ namespace SK_DiscordRPC.Framework
                         largeImageDesc = "March of the Tortodrones";
                         break;
                     default:
+                        detail = AppWindow.curWhere.getLocDetail();
+                        largeImageKey = AppWindow.curWhere.getLargeImageKey();
+                        largeImageDesc = AppWindow.curWhere.getLargeImageDesc();
                         break;
                 }
                 if (!AppContext.HIDE_KNIGHT)
@@ -116,6 +118,7 @@ namespace SK_DiscordRPC.Framework
                     state = "Knight: [hidden]";
                 }
                 set(detail, state, largeImageKey, largeImageDesc);
+                AppWindow.curWhere = where;
             }
         }
 

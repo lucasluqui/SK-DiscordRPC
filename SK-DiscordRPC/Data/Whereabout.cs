@@ -8,22 +8,28 @@ namespace SK_DiscordRPC.Data
     public class Whereabout
     {
         string ident = null;
-        string loc_id = null;
-        string scene_id = null;
+        string loc_detail = null;
+        string loc_largeImageKey = null;
+        string loc_largeImageDesc = null;
 
         public void setIdent(string ident)
         {
             this.ident = ident;
         }
 
-        public void setLocId(string id)
+        public void setLocDetail(string det)
         {
-            this.loc_id = id;
+            this.loc_detail = det;
         }
 
-        public void setSceneId(string id)
+        public void setLargeImageKey(string key)
         {
-            this.scene_id = id;
+            this.loc_largeImageKey = key;
+        }
+
+        public void setLargeImageDesc(string desc)
+        {
+            this.loc_largeImageKey = desc;
         }
 
         public string getIdent()
@@ -31,14 +37,19 @@ namespace SK_DiscordRPC.Data
             return this.ident;
         }
 
-        public string getLocId()
+        public string getLocDetail()
         {
-            return this.loc_id;
+            return this.loc_detail;
         }
 
-        public string getSceneId()
+        public string getLargeImageKey()
         {
-            return this.scene_id;
+            return this.loc_largeImageKey;
+        }
+
+        public string getLargeImageDesc()
+        {
+            return this.loc_largeImageDesc;
         }
     }
 }

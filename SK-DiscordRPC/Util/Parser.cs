@@ -27,8 +27,6 @@ namespace SK_DiscordRPC.Util
                         string rawWhereabout = line.Split('(')[1].Replace(')', '\0').Replace(' ', '\0').Replace('.', '\0');
                         string[] arrWhereabout = rawWhereabout.Split(',');
                         w.setIdent(arrWhereabout[0]);
-                        //w.setLocId(arrWhereabout[1]);
-                        //w.setSceneId(arrWhereabout[2]);
                     }
                 }
             }

@@ -16,5 +16,6 @@ namespace SK_DiscordRPC.Data
         public const String IMAGE_GLOAMING_WILDWOODS = "gww";
         public const String IMAGE_OCH = "och";
         public const String IMAGE_TORTODRONES = "tortos";
+        public const String IMAGE_DREAMS_AND_NIGHTMARES = "dan";
     }
 }
