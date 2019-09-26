@@ -46,22 +46,22 @@ namespace SK_DiscordRPC.Framework
                     case IdentCodes.IDENT_TOWN_SQUARE_EX:
                         detail = "In Town Square";
                         largeImageKey = ImageCodes.IMAGE_HAVEN;
-                        largeImageDesc = "Town Square";
+                        largeImageDesc = "Haven";
                         break;
                     case IdentCodes.IDENT_BAZAAR:
                         detail = "In Bazaar";
                         largeImageKey = ImageCodes.IMAGE_HAVEN;
-                        largeImageDesc = "Bazaar";
+                        largeImageDesc = "Haven";
                         break;
                     case IdentCodes.IDENT_ARCADE:
                         detail = "In Arcade";
                         largeImageKey = ImageCodes.IMAGE_HAVEN;
-                        largeImageDesc = "Arcade";
+                        largeImageDesc = "Haven";
                         break;
                     case IdentCodes.IDENT_GARRISON:
                         detail = "In Garrison";
                         largeImageKey = ImageCodes.IMAGE_HAVEN;
-                        largeImageDesc = "Garrison";
+                        largeImageDesc = "Haven";
                         break;
                     case IdentCodes.IDENT_MISSION_LOBBY:
                         detail = "In a Mission";
@@ -93,7 +93,10 @@ namespace SK_DiscordRPC.Framework
                         largeImageKey = ImageCodes.IMAGE_MUNITIONS_FACTORY;
                         largeImageDesc = "Iron Munitions Factory";
                         break;
-                    case IdentCodes.IDENT_FIRESTORM_CITADEL:
+                    case IdentCodes.IDENT_FIRESTORM_CITADEL_D24:
+                    case IdentCodes.IDENT_FIRESTORM_CITADEL_D25:
+                    case IdentCodes.IDENT_FIRESTORM_CITADEL_D26:
+                    case IdentCodes.IDENT_FIRESTORM_CITADEL_D27:
                         detail = "In FSC";
                         largeImageKey = ImageCodes.IMAGE_FIRESTORM_CITADEL;
                         largeImageDesc = "Firestorm Citadel";

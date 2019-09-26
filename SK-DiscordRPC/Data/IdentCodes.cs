@@ -16,9 +16,13 @@ namespace SK_DiscordRPC.Data
         public const String IDENT_MISSION_LOBBY = "2:346";
         public const String IDENT_HOI_LOBBY = "2:417";
         public const String IDENT_GITM_LOBBY = "2:425";
-        public const String IDENT_FIRESTORM_CITADEL = "2:255";
         public const String IDENT_ARCADE_STARTPOINT = "2:343";
         public const String IDENT_OCH = "2:347";
+        public const String IDENT_FIRESTORM_CITADEL_D24 = "2:255";
+        public const String IDENT_FIRESTORM_CITADEL_D25 = "2:257";
+        public const String IDENT_FIRESTORM_CITADEL_D26 = "2:253";
+        public const String IDENT_FIRESTORM_CITADEL_D27 = "2:259";
+        public const String IDENT_FIRESTORM_CITADEL_D28 = "2:261";
         public const String IDENT_MUNITIONS_FACTORY = "2:314";
         public const String IDENT_JELLY_PALACE = "2:244";
         public const String IDENT_GLOAMING_WILDWOODS = "2:375";
@@ -29,6 +33,7 @@ namespace SK_DiscordRPC.Data
         public const String IDENT_MOORCROFT_MANOR = "2:351";
         public const String IDENT_EMBERLIGHT = "2:344";
         public const String IDENT_THE_CORE = "";
+        public const String IDENT_THE_CORE_ASHES = "2:323";
         public const String IDENT_GUILDHALL = "4:4";
     }
 }
