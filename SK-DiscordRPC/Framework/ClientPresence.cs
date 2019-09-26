@@ -68,8 +68,13 @@ namespace SK_DiscordRPC.Framework
                         largeImageKey = ImageCodes.IMAGE_MISSION;
                         largeImageDesc = "Mission";
                         break;
-                    case IdentCodes.IDENT_DANGER_MISSION_LOBBY:
-                        detail = "In a Danger Mission";
+                    case IdentCodes.IDENT_HOI_LOBBY:
+                        detail = "In Heart of Ice";
+                        largeImageKey = ImageCodes.IMAGE_MISSION;
+                        largeImageDesc = "Danger Mission";
+                        break;
+                    case IdentCodes.IDENT_GITM_LOBBY:
+                        detail = "In Ghosts in the Machine";
                         largeImageKey = ImageCodes.IMAGE_MISSION;
                         largeImageDesc = "Danger Mission";
                         break;
