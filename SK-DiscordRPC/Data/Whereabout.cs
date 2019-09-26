@@ -7,9 +7,9 @@ namespace SK_DiscordRPC.Data
 {
     public class Whereabout
     {
-        string ident;
-        string loc_id;
-        string scene_id;
+        string ident = null;
+        string loc_id = null;
+        string scene_id = null;
 
         public void setIdent(string ident)
         {

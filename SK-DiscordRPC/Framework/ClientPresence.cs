@@ -17,7 +17,7 @@ namespace SK_DiscordRPC.Framework
             {
                 Details = detail,
                 State = state,
-                Timestamps = AppWindow.GlobalTime,
+                Timestamps = Timestamps.Now,
                 Assets = new Assets()
                 {
                     LargeImageKey = largeImageKey,
@@ -33,7 +33,7 @@ namespace SK_DiscordRPC.Framework
             string largeImageKey = null;
             string largeImageDesc = null;
             Whereabout where = Parser.parseWhereabout();
-            if(where != AppWindow.curWhere)
+            if(where.getIdent() != AppWindow.curWhere.getIdent())
             {
                 AppWindow.curWhere = where;
                 switch (where.getIdent())

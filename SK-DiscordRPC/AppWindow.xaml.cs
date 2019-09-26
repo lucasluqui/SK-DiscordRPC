@@ -23,8 +23,7 @@ namespace SK_DiscordRPC
 
     {
         public static DiscordRpcClient client;
-        public static Timestamps GlobalTime = Timestamps.Now;
-        public static Whereabout curWhere;
+        public static Whereabout curWhere = new Whereabout();
         private Timer ticker;
         private string CLIENT_ID = "626524043209867274";
 
@@ -40,11 +39,11 @@ namespace SK_DiscordRPC
             client.Logger = new ConsoleLogger() { Level = LogLevel.Warning };
             client.OnReady += (sender, e) =>
             {
-                Console.WriteLine("Received Ready from user {0}", e.User.Username);
+                Console.WriteLine("ready recv: {0}", e.User.Username);
             };
             client.OnPresenceUpdate += (sender, e) =>
             {
-                Console.WriteLine("Received Update! {0}", e.Presence);
+                Console.WriteLine("update: {0}", e.Presence);
             };
             client.Initialize();
             client.SetPresence(new RichPresence()
@@ -61,7 +60,8 @@ namespace SK_DiscordRPC
         }
         public void InitTicker()
         {
-            ticker = new Timer(5000);
+            int interval = 5;
+            ticker = new Timer(interval * 1000);
             ticker.Elapsed += OnTimedEvent;
             ticker.Enabled = true;
         }
