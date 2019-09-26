@@ -25,8 +25,9 @@ namespace SK_DiscordRPC
     {
         public static DiscordRpcClient client;
         public static Whereabout curWhere = new Whereabout();
-        private Timer presenceTicker;
-        private Timer gameTicker;
+        private const int interval = 5;
+        private Timer presenceTicker = new Timer(interval * 1000);
+        private Timer gameTicker = new Timer(interval * 1000);
         private string CLIENT_ID = "626524043209867274";
 
         public AppWindow()
@@ -73,16 +74,12 @@ namespace SK_DiscordRPC
 
         public void InitGameTicker()
         {
-            int interval = 5;
-            gameTicker = new Timer(interval * 1000);
             gameTicker.Elapsed += OnGameTimedEvent;
             gameTicker.Enabled = true;
         }
 
         public void InitPresenceTicker()
         {
-            int interval = 5;
-            presenceTicker = new Timer(interval * 1000);
             presenceTicker.Elapsed += OnPresenceTimedEvent;
             presenceTicker.Enabled = true;
         }
