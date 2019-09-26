@@ -96,7 +96,15 @@ namespace SK_DiscordRPC
 
         private void OnPresenceTimedEvent(object sender, EventArgs e)
         {
-            ClientPresence.update();
+            if (Parser.isGameRunning())
+            {
+                ClientPresence.update();
+            }
+            else
+            {
+                presenceTicker.Dispose();
+                InitGameTicker();
+            }
         }
 
     }
