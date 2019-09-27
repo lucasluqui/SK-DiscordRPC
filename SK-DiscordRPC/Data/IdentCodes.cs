@@ -9,6 +9,7 @@ namespace SK_DiscordRPC.Data
     {
         public const String IDENT_TOWN_SQUARE = "1";
         public const String IDENT_TOWN_SQUARE_EX = "1:1";
+        public const String IDENT_GENERIC_CLOCKWORKS = "2:0";
         public const String IDENT_BAZAAR = "2";
         public const String IDENT_ARCADE = "3";
         public const String IDENT_GARRISON = "445";
@@ -16,7 +17,10 @@ namespace SK_DiscordRPC.Data
         public const String IDENT_MISSION_LOBBY = "2:346";
         public const String IDENT_HOI_LOBBY = "2:417";
         public const String IDENT_GITM_LOBBY = "2:425";
+        public const String IDENT_TORTODRONES_LOBBY = "2:463";
         public const String IDENT_ARCADE_STARTPOINT = "2:343";
+        public const String IDENT_ARCADE_TERMINAL = "2:321";
+        public const String IDENT_ARCADE_TERMINAL_SL = "";
         public const String IDENT_OCH = "2:347";
         public const String IDENT_FIRESTORM_CITADEL_D24 = "2:255";
         public const String IDENT_FIRESTORM_CITADEL_D25 = "2:257";
@@ -26,7 +30,6 @@ namespace SK_DiscordRPC.Data
         public const String IDENT_MUNITIONS_FACTORY = "2:314";
         public const String IDENT_JELLY_PALACE = "2:244";
         public const String IDENT_GLOAMING_WILDWOODS = "2:375";
-        public const String IDENT_TORTODRONES_LOBBY = "2:463";
         public const String IDENT_DREAMS_AND_NIGHTMARES = "2:485";
         public const String IDENT_ROTTING_METRO = "2:266";
         public const String IDENT_ROTTING_METRO_EX = "2:264";

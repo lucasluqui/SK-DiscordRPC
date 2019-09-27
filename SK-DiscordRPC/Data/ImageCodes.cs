@@ -9,7 +9,7 @@ namespace SK_DiscordRPC.Data
     {
         public const String IMAGE_READY_ROOM = "ready_room";
         public const String IMAGE_HAVEN = "haven_default";
-        public const String IMAGE_MISSION = "terminal";
+        public const String IMAGE_TERMINAL = "terminal";
         public const String IMAGE_FIRESTORM_CITADEL = "fsc";
         public const String IMAGE_MUNITIONS_FACTORY = "imf";
         public const String IMAGE_JELLY_PALACE = "rjp";
@@ -22,5 +22,7 @@ namespace SK_DiscordRPC.Data
         public const String IMAGE_EMBERLIGHT = "subtown";
         public const String IMAGE_THE_CORE = "core";
         public const String IMAGE_GUILDHALL = "guildhall";
+        public const String IMAGE_GENERIC_CLOCKWORKS = "clockworks";
+        public const String IMAGE_LOBBY = "lobby";
     }
 }

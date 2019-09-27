@@ -33,10 +33,25 @@ namespace SK_DiscordRPC.Framework
             string largeImageKey = null;
             string largeImageDesc = null;
             Whereabout where = Parser.parseWhereabout();
-            if(where.getIdent() != AppWindow.curWhere.getIdent())
+            string curIdent = AppWindow.curWhere.getIdent();
+            if (where.getIdent() != curIdent)
             {
                 switch (where.getIdent())
                 {
+                    case IdentCodes.IDENT_GENERIC_CLOCKWORKS:
+                        if (curIdent != IdentCodes.IDENT_MISSION_LOBBY
+                            && curIdent != IdentCodes.IDENT_HOI_LOBBY
+                            && curIdent != IdentCodes.IDENT_GITM_LOBBY)
+                        {
+                            detail = "In The Clockworks";
+                            largeImageKey = ImageCodes.IMAGE_GENERIC_CLOCKWORKS;
+                            largeImageDesc = "The Clockworks";
+                        }
+                        else
+                        {
+                            return;
+                        }
+                        break;
                     case IdentCodes.IDENT_READY_ROOM:
                         detail = "In Ready Room";
                         largeImageKey = ImageCodes.IMAGE_READY_ROOM;
@@ -63,20 +78,45 @@ namespace SK_DiscordRPC.Framework
                         largeImageKey = ImageCodes.IMAGE_HAVEN;
                         largeImageDesc = "Haven";
                         break;
+                    case IdentCodes.IDENT_ARCADE_STARTPOINT:
+                        detail = "Starting an Arcade run";
+                        largeImageKey = ImageCodes.IMAGE_LOBBY;
+                        largeImageDesc = "Lobby";
+                        break;
+                    case IdentCodes.IDENT_ARCADE_TERMINAL:
+                        detail = "In a Terminal";
+                        largeImageKey = ImageCodes.IMAGE_TERMINAL;
+                        largeImageDesc = "Terminal";
+                        break;
+                    case IdentCodes.IDENT_MOORCROFT_MANOR:
+                        detail = "In Moorcroft Manor";
+                        largeImageKey = ImageCodes.IMAGE_MOORCROFT_MANOR;
+                        largeImageDesc = "Moorcroft Manor";
+                        break;
+                    case IdentCodes.IDENT_EMBERLIGHT:
+                        detail = "In Emberlight";
+                        largeImageKey = ImageCodes.IMAGE_EMBERLIGHT;
+                        largeImageDesc = "Emberlight";
+                        break;
                     case IdentCodes.IDENT_MISSION_LOBBY:
                         detail = "In a Mission";
-                        largeImageKey = ImageCodes.IMAGE_MISSION;
+                        largeImageKey = ImageCodes.IMAGE_GENERIC_CLOCKWORKS;
                         largeImageDesc = "Mission";
                         break;
                     case IdentCodes.IDENT_HOI_LOBBY:
                         detail = "In Heart of Ice";
-                        largeImageKey = ImageCodes.IMAGE_MISSION;
+                        largeImageKey = ImageCodes.IMAGE_GENERIC_CLOCKWORKS;
                         largeImageDesc = "Danger Mission";
                         break;
                     case IdentCodes.IDENT_GITM_LOBBY:
                         detail = "In Ghosts in the Machine";
-                        largeImageKey = ImageCodes.IMAGE_MISSION;
+                        largeImageKey = ImageCodes.IMAGE_GENERIC_CLOCKWORKS;
                         largeImageDesc = "Danger Mission";
+                        break;
+                    case IdentCodes.IDENT_TORTODRONES_LOBBY:
+                        detail = "In March of the Tortodrones";
+                        largeImageKey = ImageCodes.IMAGE_TORTODRONES;
+                        largeImageDesc = "March of the Tortodrones";
                         break;
                     case IdentCodes.IDENT_GLOAMING_WILDWOODS:
                         detail = "In GWW";
@@ -106,35 +146,20 @@ namespace SK_DiscordRPC.Framework
                         largeImageKey = ImageCodes.IMAGE_OCH;
                         largeImageDesc = "Operation Crimson Hammer";
                         break;
-                    case IdentCodes.IDENT_TORTODRONES_LOBBY:
-                        detail = "In March of the Tortodrones";
-                        largeImageKey = ImageCodes.IMAGE_TORTODRONES;
-                        largeImageDesc = "March of the Tortodrones";
+                    case IdentCodes.IDENT_THE_CORE:
+                        detail = "In The Core";
+                        largeImageKey = ImageCodes.IMAGE_THE_CORE;
+                        largeImageDesc = "The Core";
                         break;
                     case IdentCodes.IDENT_DREAMS_AND_NIGHTMARES:
                         detail = "In Dreams and Nightmares";
                         largeImageKey = ImageCodes.IMAGE_DREAMS_AND_NIGHTMARES;
                         largeImageDesc = "Dreams and Nightmares";
                         break;
-                    case IdentCodes.IDENT_MOORCROFT_MANOR:
-                        detail = "In Moorcroft Manor";
-                        largeImageKey = ImageCodes.IMAGE_MOORCROFT_MANOR;
-                        largeImageDesc = "Moorcroft Manor";
-                        break;
-                    case IdentCodes.IDENT_EMBERLIGHT:
-                        detail = "In Emberlight";
-                        largeImageKey = ImageCodes.IMAGE_EMBERLIGHT;
-                        largeImageDesc = "Emberlight";
-                        break;
-                    case IdentCodes.IDENT_THE_CORE:
-                        detail = "In The Core";
-                        largeImageKey = ImageCodes.IMAGE_THE_CORE;
-                        largeImageDesc = "The Core";
-                        break;
                     case IdentCodes.IDENT_GUILDHALL:
-                        detail = "In a Guildhall";
+                        detail = "In a Guild Hall";
                         largeImageKey = ImageCodes.IMAGE_GUILDHALL;
-                        largeImageDesc = "A Guildhall";
+                        largeImageDesc = "A Guild Hall";
                         break;
                     default:
                         return;
