@@ -84,6 +84,7 @@ namespace SK_DiscordRPC.Framework
                         largeImageDesc = "Lobby";
                         break;
                     case IdentCodes.IDENT_ARCADE_TERMINAL:
+                    case IdentCodes.IDENT_ARCADE_TERMINAL_SL:
                         detail = "In a Terminal";
                         largeImageKey = ImageCodes.IMAGE_TERMINAL;
                         largeImageDesc = "Terminal";
