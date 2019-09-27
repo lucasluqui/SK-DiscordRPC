@@ -114,6 +114,11 @@ namespace SK_DiscordRPC.Framework
                         largeImageKey = ImageCodes.IMAGE_GENERIC_CLOCKWORKS;
                         largeImageDesc = "Danger Mission";
                         break;
+                    case IdentCodes.IDENT_C42_LOBBY:
+                        detail = "In Compound 42";
+                        largeImageKey = ImageCodes.IMAGE_GENERIC_CLOCKWORKS;
+                        largeImageDesc = "Danger Mission";
+                        break;
                     case IdentCodes.IDENT_TORTODRONES_LOBBY:
                         detail = "In March of the Tortodrones";
                         largeImageKey = ImageCodes.IMAGE_TORTODRONES;
