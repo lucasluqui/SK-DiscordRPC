@@ -28,7 +28,8 @@ namespace SK_DiscordRPC.Data
         public const String IDENT_FIRESTORM_CITADEL_D26 = "2:253";
         public const String IDENT_FIRESTORM_CITADEL_D27 = "2:259";
         public const String IDENT_FIRESTORM_CITADEL_D28 = "2:261";
-        public const String IDENT_MUNITIONS_FACTORY = "2:314";
+        public const String IDENT_MUNITIONS_FACTORY_D14 = "2:314";
+        public const String IDENT_MUNITIONS_FACTORY_D15 = "2:318";
         public const String IDENT_JELLY_PALACE = "2:244";
         public const String IDENT_GLOAMING_WILDWOODS = "2:375";
         public const String IDENT_DREAMS_AND_NIGHTMARES = "2:485";
@@ -39,5 +40,8 @@ namespace SK_DiscordRPC.Data
         public const String IDENT_THE_CORE = "";
         public const String IDENT_THE_CORE_ASHES = "2:323";
         public const String IDENT_GUILDHALL = "4:4";
+        public const String IDENT_GUILDHALL_GYM_T1 = "2:435";
+        public const String IDENT_GUILDHALL_GYM_T2 = "2:436";
+        public const String IDENT_GUILDHALL_GYM_T3 = "2:437";
     }
 }

@@ -134,7 +134,8 @@ namespace SK_DiscordRPC.Framework
                         largeImageKey = ImageCodes.IMAGE_JELLY_PALACE;
                         largeImageDesc = "Royal Jelly Palace";
                         break;
-                    case IdentCodes.IDENT_MUNITIONS_FACTORY:
+                    case IdentCodes.IDENT_MUNITIONS_FACTORY_D14:
+                    case IdentCodes.IDENT_MUNITIONS_FACTORY_D15:
                         detail = "In IMF";
                         largeImageKey = ImageCodes.IMAGE_MUNITIONS_FACTORY;
                         largeImageDesc = "Iron Munitions Factory";
@@ -166,6 +167,13 @@ namespace SK_DiscordRPC.Framework
                         detail = "In a Guild Hall";
                         largeImageKey = ImageCodes.IMAGE_GUILDHALL;
                         largeImageDesc = "A Guild Hall";
+                        break;
+                    case IdentCodes.IDENT_GUILDHALL_GYM_T1:
+                    case IdentCodes.IDENT_GUILDHALL_GYM_T2:
+                    case IdentCodes.IDENT_GUILDHALL_GYM_T3:
+                        detail = "In a Guild Training Hall";
+                        largeImageKey = ImageCodes.IMAGE_GENERIC_CLOCKWORKS;
+                        largeImageDesc = "A Guild Training Hall";
                         break;
                     default:
                         return;
