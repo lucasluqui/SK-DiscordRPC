@@ -91,12 +91,12 @@ namespace SK_DiscordRPC.Framework
                         break;
                     case IdentCodes.IDENT_MOORCROFT_MANOR:
                         detail = "In Moorcroft Manor";
-                        largeImageKey = ImageCodes.IMAGE_MOORCROFT_MANOR;
+                        largeImageKey = ImageCodes.IMAGE_SUBTOWN;
                         largeImageDesc = "Moorcroft Manor";
                         break;
                     case IdentCodes.IDENT_EMBERLIGHT:
                         detail = "In Emberlight";
-                        largeImageKey = ImageCodes.IMAGE_EMBERLIGHT;
+                        largeImageKey = ImageCodes.IMAGE_SUBTOWN;
                         largeImageDesc = "Emberlight";
                         break;
                     case IdentCodes.IDENT_MISSION_LOBBY:
@@ -160,7 +160,7 @@ namespace SK_DiscordRPC.Framework
                         break;
                     case IdentCodes.IDENT_DREAMS_AND_NIGHTMARES:
                         detail = "In Dreams and Nightmares";
-                        largeImageKey = ImageCodes.IMAGE_DREAMS_AND_NIGHTMARES;
+                        largeImageKey = ImageCodes.IMAGE_THE_CORE;
                         largeImageDesc = "Dreams and Nightmares";
                         break;
                     case IdentCodes.IDENT_GUILDHALL:
