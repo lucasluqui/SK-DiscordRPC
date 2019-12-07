@@ -64,7 +64,9 @@ namespace SK_DiscordRPC
                 Assets = new Assets()
                 {
                     LargeImageKey = "",
-                    LargeImageText = ""
+                    LargeImageText = "",
+                    SmallImageKey = "",
+                    SmallImageText = ""
                 }
             });
 

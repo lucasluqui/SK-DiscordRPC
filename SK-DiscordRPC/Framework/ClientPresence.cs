@@ -11,17 +11,18 @@ namespace SK_DiscordRPC.Framework
     public static class ClientPresence
     {
 
-        private static void set(string detail, string state, string largeImageKey, string largeImageDesc)
+        private static void set(string detail, string largeImageKey, string largeImageDesc, string knightName)
         {
             AppWindow.client.SetPresence(new RichPresence()
             {
                 Details = detail,
-                State = state,
                 Timestamps = Timestamps.Now,
                 Assets = new Assets()
                 {
                     LargeImageKey = largeImageKey,
-                    LargeImageText = largeImageDesc
+                    LargeImageText = largeImageDesc,
+                    SmallImageKey = "knight",
+                    SmallImageText = "Knight: " + knightName
                 }
             });
         }
@@ -29,9 +30,9 @@ namespace SK_DiscordRPC.Framework
         public static void update()
         {
             string detail = null;
-            string state = null;
             string largeImageKey = null;
             string largeImageDesc = null;
+            string knight = null;
             Whereabout where = Parser.parseWhereabout();
             string curIdent = AppWindow.curWhere.getIdent();
             if (where.getIdent() != curIdent)
@@ -129,21 +130,22 @@ namespace SK_DiscordRPC.Framework
                         largeImageKey = ImageCodes.IMAGE_GLOAMING_WILDWOODS;
                         largeImageDesc = "Gloaming Wildwoods";
                         break;
-                    case IdentCodes.IDENT_JELLY_PALACE:
+                    case IdentCodes.IDENT_JELLY_PALACE_F1:
+                    case IdentCodes.IDENT_JELLY_PALACE_F2:
                         detail = "In RJP";
                         largeImageKey = ImageCodes.IMAGE_JELLY_PALACE;
                         largeImageDesc = "Royal Jelly Palace";
                         break;
-                    case IdentCodes.IDENT_MUNITIONS_FACTORY_D14:
-                    case IdentCodes.IDENT_MUNITIONS_FACTORY_D15:
+                    case IdentCodes.IDENT_MUNITIONS_FACTORY_F1:
+                    case IdentCodes.IDENT_MUNITIONS_FACTORY_F2:
                         detail = "In IMF";
                         largeImageKey = ImageCodes.IMAGE_MUNITIONS_FACTORY;
                         largeImageDesc = "Iron Munitions Factory";
                         break;
-                    case IdentCodes.IDENT_FIRESTORM_CITADEL_D24:
-                    case IdentCodes.IDENT_FIRESTORM_CITADEL_D25:
-                    case IdentCodes.IDENT_FIRESTORM_CITADEL_D26:
-                    case IdentCodes.IDENT_FIRESTORM_CITADEL_D27:
+                    case IdentCodes.IDENT_FIRESTORM_CITADEL_F1:
+                    case IdentCodes.IDENT_FIRESTORM_CITADEL_F2:
+                    case IdentCodes.IDENT_FIRESTORM_CITADEL_F3:
+                    case IdentCodes.IDENT_FIRESTORM_CITADEL_F4:
                         detail = "In FSC";
                         largeImageKey = ImageCodes.IMAGE_FIRESTORM_CITADEL;
                         largeImageDesc = "Firestorm Citadel";
@@ -180,13 +182,13 @@ namespace SK_DiscordRPC.Framework
                 }
                 if (!AppContext.HIDE_KNIGHT)
                 {
-                    state = "Knight: " + Parser.parseKnightName();
+                    knight = Parser.parseKnightName();
                 }
                 else
                 {
-                    state = "Knight: [hidden]";
+                    knight = "[hidden]";
                 }
-                set(detail, state, largeImageKey, largeImageDesc);
+                set(detail, largeImageKey, largeImageDesc, knight);
                 AppWindow.curWhere = where;
             }
         }
