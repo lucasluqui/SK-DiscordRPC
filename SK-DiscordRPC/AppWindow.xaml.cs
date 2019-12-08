@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DiscordRPC;
 using DiscordRPC.Logging;
+using Hardcodet.Wpf.TaskbarNotification;
 using SK_DiscordRPC.Util;
 using SK_DiscordRPC.Data;
 using SK_DiscordRPC.Framework;
@@ -23,17 +24,24 @@ namespace SK_DiscordRPC
     public partial class AppWindow : Window
 
     {
+        public static TaskbarIcon tb;
+
         public static DiscordRpcClient client;
         public static Whereabout curWhere = new Whereabout();
+
         private const int interval = 5;
         private Timer presenceTicker = new Timer(interval * 1000);
         private Timer gameTicker = new Timer(interval * 1000);
+
         private string CLIENT_ID = "626524043209867274";
 
         public AppWindow()
         {
             InitializeComponent();
-            if(Parser.isGameRunning())
+            tb = (TaskbarIcon)FindName("TrayIcon");
+            tb.ShowBalloonTip("SK-DiscordRPC", "Now running in tray bar, you can configure or exit the application there.", BalloonIcon.None);
+
+            if (Parser.isGameRunning())
             {
                 SetupRPC();
             }
@@ -107,6 +115,11 @@ namespace SK_DiscordRPC
                 client.Dispose();
                 InitGameTicker();
             }
+        }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }
