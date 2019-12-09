@@ -11,20 +11,38 @@ namespace SK_DiscordRPC.Framework
     public static class ClientPresence
     {
 
-        private static void set(string detail, string largeImageKey, string largeImageDesc, string knightName)
+        private static string knightName = null;
+
+        private static void set(string detail, string largeImageKey, string largeImageDesc)
         {
-            AppWindow.client.SetPresence(new RichPresence()
+            if (Properties.Settings.Default.ShowKnight)
             {
-                Details = detail,
-                Timestamps = Timestamps.Now,
-                Assets = new Assets()
+                AppWindow.client.SetPresence(new RichPresence()
                 {
-                    LargeImageKey = largeImageKey,
-                    LargeImageText = largeImageDesc,
-                    SmallImageKey = "knight",
-                    SmallImageText = "Knight: " + knightName
-                }
-            });
+                    Details = detail,
+                    Timestamps = Timestamps.Now,
+                    Assets = new Assets()
+                    {
+                        LargeImageKey = largeImageKey,
+                        LargeImageText = largeImageDesc,
+                        SmallImageKey = "knight",
+                        SmallImageText = "Knight: " + knightName
+                    }
+                });
+            }
+            else
+            {
+                AppWindow.client.SetPresence(new RichPresence()
+                {
+                    Details = detail,
+                    Timestamps = Timestamps.Now,
+                    Assets = new Assets()
+                    {
+                        LargeImageKey = largeImageKey,
+                        LargeImageText = largeImageDesc
+                    }
+                });
+            }
         }
 
         public static void update()
@@ -32,7 +50,7 @@ namespace SK_DiscordRPC.Framework
             string detail = null;
             string largeImageKey = null;
             string largeImageDesc = null;
-            string knight = null;
+            knightName = Parser.parseKnightName();
             Whereabout where = Parser.parseWhereabout();
             string curIdent = AppWindow.curWhere.getIdent();
             if (where.getIdent() != curIdent)
@@ -42,7 +60,9 @@ namespace SK_DiscordRPC.Framework
                     case IdentCodes.IDENT_GENERIC_CLOCKWORKS:
                         if (curIdent != IdentCodes.IDENT_MISSION_LOBBY
                             && curIdent != IdentCodes.IDENT_HOI_LOBBY
-                            && curIdent != IdentCodes.IDENT_GITM_LOBBY)
+                            && curIdent != IdentCodes.IDENT_GITM_LOBBY
+                            && curIdent != IdentCodes.IDENT_C42_LOBBY
+                            && curIdent != IdentCodes.IDENT_LOA_LOBBY)
                         {
                             detail = "In The Clockworks";
                             largeImageKey = ImageCodes.IMAGE_GENERIC_CLOCKWORKS;
@@ -120,10 +140,20 @@ namespace SK_DiscordRPC.Framework
                         largeImageKey = ImageCodes.IMAGE_GENERIC_CLOCKWORKS;
                         largeImageDesc = "Danger Mission";
                         break;
+                    case IdentCodes.IDENT_LOA_LOBBY:
+                        detail = "In Legion of Almire";
+                        largeImageKey = ImageCodes.IMAGE_GENERIC_CLOCKWORKS;
+                        largeImageDesc = "Danger Mission";
+                        break;
                     case IdentCodes.IDENT_TORTODRONES_LOBBY:
                         detail = "In March of the Tortodrones";
                         largeImageKey = ImageCodes.IMAGE_TORTODRONES;
                         largeImageDesc = "March of the Tortodrones";
+                        break;
+                    case IdentCodes.IDENT_HARVESTER_LOBBY:
+                        detail = "In Apocrea";
+                        largeImageKey = ImageCodes.IMAGE_TORTODRONES;
+                        largeImageDesc = "Shroud of the Apocrea";
                         break;
                     case IdentCodes.IDENT_GLOAMING_WILDWOODS:
                         detail = "In GWW";
@@ -180,15 +210,7 @@ namespace SK_DiscordRPC.Framework
                     default:
                         return;
                 }
-                if (!AppContext.HIDE_KNIGHT)
-                {
-                    knight = Parser.parseKnightName();
-                }
-                else
-                {
-                    knight = "[hidden]";
-                }
-                set(detail, largeImageKey, largeImageDesc, knight);
+                set(detail, largeImageKey, largeImageDesc);
                 AppWindow.curWhere = where;
             }
         }

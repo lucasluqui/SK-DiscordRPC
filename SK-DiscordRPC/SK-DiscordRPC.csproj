@@ -61,7 +61,6 @@
     </ApplicationDefinition>
     <Compile Include="Data\IdentCodes.cs" />
     <Compile Include="Data\ImageCodes.cs" />
-    <Compile Include="System\AppContext.cs" />
     <Compile Include="Util\Parser.cs" />
     <Page Include="AppWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -96,6 +95,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

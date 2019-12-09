@@ -13,7 +13,7 @@
         <tb:TaskbarIcon x:Name="TrayIcon" IconSource="/Resources/tray.ico" ToolTipText="SK-DiscordRPC">
             <tb:TaskbarIcon.ContextMenu>
                 <ContextMenu>
-                    <MenuItem Header="Hide knight name" />
+                    <MenuItem x:Name="ShowKnightItem" Header="Show knight name" Click="ShowKnight_Click" IsChecked="False"/>
                     <MenuItem Header="Exit" Click="Exit_Click"/>
                 </ContextMenu>
             </tb:TaskbarIcon.ContextMenu>

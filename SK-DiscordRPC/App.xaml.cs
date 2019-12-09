@@ -11,8 +11,7 @@ namespace SK_DiscordRPC
     {
         private void AppWindow_OnExit(object sender, ExitEventArgs e)
         {
-            //AppWindow.client.Deinitialize();
-            //AppWindow.client.Dispose();
+            //Properties.Settings.Default.Save();
         }
     }
 }

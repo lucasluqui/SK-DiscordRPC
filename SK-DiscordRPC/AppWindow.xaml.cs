@@ -1,23 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Timers;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using DiscordRPC;
 using DiscordRPC.Logging;
 using Hardcodet.Wpf.TaskbarNotification;
 using SK_DiscordRPC.Util;
 using SK_DiscordRPC.Data;
 using SK_DiscordRPC.Framework;
+using System.Windows.Controls;
 
 namespace SK_DiscordRPC
 {
@@ -40,6 +30,12 @@ namespace SK_DiscordRPC
             InitializeComponent();
             tb = (TaskbarIcon)FindName("TrayIcon");
             tb.ShowBalloonTip("SK-DiscordRPC", "Now running in tray bar, you can configure or exit the application there.", BalloonIcon.None);
+
+            if (Properties.Settings.Default.ShowKnight)
+            {
+                ShowKnightItem = (MenuItem)FindName("ShowKnightItem");
+                ShowKnightItem.IsChecked = true;
+            }
 
             if (Parser.isGameRunning())
             {
@@ -119,7 +115,25 @@ namespace SK_DiscordRPC
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
+            Properties.Settings.Default.Save();
             Close();
         }
+
+        private void ShowKnight_Click(object sender, RoutedEventArgs e)
+        {
+            if (Properties.Settings.Default.ShowKnight)
+            {
+                Properties.Settings.Default.ShowKnight = false;
+                ShowKnightItem.IsChecked = false;
+                Properties.Settings.Default.Save();
+            }
+            else
+            {
+                Properties.Settings.Default.ShowKnight = true;
+                ShowKnightItem.IsChecked = true;
+                Properties.Settings.Default.Save();
+            }
+        }
+
     }
 }
