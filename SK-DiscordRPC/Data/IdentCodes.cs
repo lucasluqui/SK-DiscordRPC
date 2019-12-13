@@ -21,6 +21,7 @@ namespace SK_DiscordRPC.Data
         public const String IDENT_LOA_LOBBY = "2:348";
         public const String IDENT_TORTODRONES_LOBBY = "2:463";
         public const String IDENT_HARVESTER_LOBBY = "2:456";
+        public const String IDENT_SPARKDUMP_LOBBY = "2:459";
         public const String IDENT_ARCADE_STARTPOINT = "2:343";
         public const String IDENT_ARCADE_TERMINAL = "2:321";
         public const String IDENT_ARCADE_TERMINAL_SL = "2:324";

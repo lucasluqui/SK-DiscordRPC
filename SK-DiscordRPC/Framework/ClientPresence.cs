@@ -155,6 +155,11 @@ namespace SK_DiscordRPC.Framework
                         largeImageKey = ImageCodes.IMAGE_TORTODRONES;
                         largeImageDesc = "Shroud of the Apocrea";
                         break;
+                    case IdentCodes.IDENT_SPARKDUMP_LOBBY:
+                        detail = "In GA";
+                        largeImageKey = ImageCodes.IMAGE_GENERIC_CLOCKWORKS;
+                        largeImageDesc = "Grinchlin Assault";
+                        break;
                     case IdentCodes.IDENT_GLOAMING_WILDWOODS:
                         detail = "In GWW";
                         largeImageKey = ImageCodes.IMAGE_GLOAMING_WILDWOODS;
