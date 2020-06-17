@@ -109,7 +109,8 @@ namespace SK_DiscordRPC
                 presenceTicker.Dispose();
                 client.Deinitialize();
                 client.Dispose();
-                InitGameTicker();
+                Properties.Settings.Default.Save();
+                Close();
             }
         }
 
