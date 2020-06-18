@@ -110,14 +110,14 @@ namespace SK_DiscordRPC
                 client.Deinitialize();
                 client.Dispose();
                 Properties.Settings.Default.Save();
-                Application.Current.Shutdown();
+                Environment.Exit(0);
             }
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             Properties.Settings.Default.Save();
-            Application.Current.Shutdown();
+            Environment.Exit(0);
         }
 
         private void ShowKnight_Click(object sender, RoutedEventArgs e)
