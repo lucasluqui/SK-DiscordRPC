@@ -29,7 +29,7 @@ namespace SK_DiscordRPC
         {
             InitializeComponent();
             tb = (TaskbarIcon)FindName("TrayIcon");
-            tb.ShowBalloonTip("SK-DiscordRPC", "Now running in tray bar, you can configure or exit the application there.", BalloonIcon.None);
+            tb.ShowBalloonTip("Knight Launcher (In-game RPC)", "Now running in tray bar, you can configure or exit the module there.", BalloonIcon.None);
 
             if (Properties.Settings.Default.ShowKnight)
             {
@@ -110,14 +110,14 @@ namespace SK_DiscordRPC
                 client.Deinitialize();
                 client.Dispose();
                 Properties.Settings.Default.Save();
-                Close();
+                Application.Current.Shutdown();
             }
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             Properties.Settings.Default.Save();
-            Close();
+            Application.Current.Shutdown();
         }
 
         private void ShowKnight_Click(object sender, RoutedEventArgs e)
