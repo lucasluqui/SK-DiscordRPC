@@ -14,6 +14,10 @@ namespace SK_DiscordRPC.Data
         public const String IMAGE_MUNITIONS_FACTORY = "imf";
         public const String IMAGE_JELLY_PALACE = "rjp";
         public const String IMAGE_GLOAMING_WILDWOODS = "gww";
+        public const String IMAGE_FIRESTORM_CITADEL_BOSS = "fsc_boss";
+        public const String IMAGE_MUNITIONS_FACTORY_BOSS = "imf_boss";
+        public const String IMAGE_JELLY_PALACE_BOSS = "rjp_boss";
+        public const String IMAGE_GLOAMING_WILDWOODS_BOSS = "gww_boss";
         public const String IMAGE_OCH = "och";
         public const String IMAGE_TORTODRONES = "tortos";
         public const String IMAGE_ROTTING_METRO = "metro";

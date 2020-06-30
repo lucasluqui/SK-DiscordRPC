@@ -33,9 +33,13 @@ namespace SK_DiscordRPC.Data
         public const String IDENT_FIRESTORM_CITADEL_F5 = "2:261";
         public const String IDENT_MUNITIONS_FACTORY_F1 = "2:314";
         public const String IDENT_MUNITIONS_FACTORY_F2 = "2:318";
+        public const String IDENT_MUNITIONS_FACTORY_F3 = "2:316";
         public const String IDENT_JELLY_PALACE_F1 = "2:244";
         public const String IDENT_JELLY_PALACE_F2 = "2:242";
-        public const String IDENT_GLOAMING_WILDWOODS = "2:375";
+        public const String IDENT_JELLY_PALACE_F3 = "2:246";
+        public const String IDENT_GLOAMING_WILDWOODS_F1 = "2:375";
+        public const String IDENT_GLOAMING_WILDWOODS_F2 = "2:377";
+        public const String IDENT_GLOAMING_WILDWOODS_F3 = "2:379";
         public const String IDENT_DREAMS_AND_NIGHTMARES = "2:485";
         public const String IDENT_ROTTING_METRO = "2:266";
         public const String IDENT_ROTTING_METRO_EX = "2:264";

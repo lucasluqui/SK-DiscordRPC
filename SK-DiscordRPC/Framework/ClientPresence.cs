@@ -160,30 +160,75 @@ namespace SK_DiscordRPC.Framework
                         largeImageKey = ImageCodes.IMAGE_GENERIC_CLOCKWORKS;
                         largeImageDesc = "Grinchlin Assault";
                         break;
-                    case IdentCodes.IDENT_GLOAMING_WILDWOODS:
-                        detail = "In GWW";
+                    case IdentCodes.IDENT_GLOAMING_WILDWOODS_F1:
+                        detail = "In GWW (Floor 1)";
                         largeImageKey = ImageCodes.IMAGE_GLOAMING_WILDWOODS;
-                        largeImageDesc = "Gloaming Wildwoods";
+                        largeImageDesc = "Gloaming Wildwoods (Terrilous Trail)";
+                        break;
+                    case IdentCodes.IDENT_GLOAMING_WILDWOODS_F2:
+                        detail = "In GWW (Floor 2)";
+                        largeImageKey = ImageCodes.IMAGE_GLOAMING_WILDWOODS;
+                        largeImageDesc = "Gloaming Wildwoods (Roarsterous Ruins)";
+                        break;
+                    case IdentCodes.IDENT_GLOAMING_WILDWOODS_F3:
+                        detail = "In GWW (Boss Fight)";
+                        largeImageKey = ImageCodes.IMAGE_GLOAMING_WILDWOODS_BOSS;
+                        largeImageDesc = "Gloaming Wildwoods (Lair of the Snarbolax)";
                         break;
                     case IdentCodes.IDENT_JELLY_PALACE_F1:
-                    case IdentCodes.IDENT_JELLY_PALACE_F2:
-                        detail = "In RJP";
+                        detail = "In RJP (Floor 1)";
                         largeImageKey = ImageCodes.IMAGE_JELLY_PALACE;
-                        largeImageDesc = "Royal Jelly Palace";
+                        largeImageDesc = "Royal Jelly Palace (Garden of Goo)";
+                        break;
+                    case IdentCodes.IDENT_JELLY_PALACE_F2:
+                        detail = "In RJP (Floor 2)";
+                        largeImageKey = ImageCodes.IMAGE_JELLY_PALACE;
+                        largeImageDesc = "Royal Jelly Palace (Red Carpet Runaround)";
+                        break;
+                    case IdentCodes.IDENT_JELLY_PALACE_F3:
+                        detail = "In RJP (Boss Fight)";
+                        largeImageKey = ImageCodes.IMAGE_JELLY_PALACE_BOSS;
+                        largeImageDesc = "Royal Jelly Palace (Battle Royale)";
                         break;
                     case IdentCodes.IDENT_MUNITIONS_FACTORY_F1:
-                    case IdentCodes.IDENT_MUNITIONS_FACTORY_F2:
-                        detail = "In IMF";
+                        detail = "In IMF (Floor 1)";
                         largeImageKey = ImageCodes.IMAGE_MUNITIONS_FACTORY;
-                        largeImageDesc = "Iron Munitions Factory";
+                        largeImageDesc = "Iron Munitions Factory (Abandoned Assembly)";
+                        break;
+                    case IdentCodes.IDENT_MUNITIONS_FACTORY_F2:
+                        detail = "In IMF (Floor 2)";
+                        largeImageKey = ImageCodes.IMAGE_MUNITIONS_FACTORY;
+                        largeImageDesc = "Iron Munitions Factory (Warfare Workshop)";
+                        break;
+                    case IdentCodes.IDENT_MUNITIONS_FACTORY_F3:
+                        detail = "In IMF (Boss Fight)";
+                        largeImageKey = ImageCodes.IMAGE_MUNITIONS_FACTORY_BOSS;
+                        largeImageDesc = "Iron Munitions Factory (The Roarmulus Twins)";
                         break;
                     case IdentCodes.IDENT_FIRESTORM_CITADEL_F1:
-                    case IdentCodes.IDENT_FIRESTORM_CITADEL_F2:
-                    case IdentCodes.IDENT_FIRESTORM_CITADEL_F3:
-                    case IdentCodes.IDENT_FIRESTORM_CITADEL_F4:
-                        detail = "In FSC";
+                        detail = "In FSC (Floor 1)";
                         largeImageKey = ImageCodes.IMAGE_FIRESTORM_CITADEL;
-                        largeImageDesc = "Firestorm Citadel";
+                        largeImageDesc = "Firestorm Citadel (Blackstone Bridge)";
+                        break;
+                    case IdentCodes.IDENT_FIRESTORM_CITADEL_F2:
+                        detail = "In FSC (Floor 2)";
+                        largeImageKey = ImageCodes.IMAGE_FIRESTORM_CITADEL;
+                        largeImageDesc = "Firestorm Citadel (Charred Court)";
+                        break;
+                    case IdentCodes.IDENT_FIRESTORM_CITADEL_F3:
+                        detail = "In FSC (Floor 3)";
+                        largeImageKey = ImageCodes.IMAGE_FIRESTORM_CITADEL;
+                        largeImageDesc = "Firestorm Citadel (Ashen Armory)";
+                        break;
+                    case IdentCodes.IDENT_FIRESTORM_CITADEL_F4:
+                        detail = "In FSC (Floor 4)";
+                        largeImageKey = ImageCodes.IMAGE_FIRESTORM_CITADEL;
+                        largeImageDesc = "Firestorm Citadel (Smoldering Steps)";
+                        break;
+                    case IdentCodes.IDENT_FIRESTORM_CITADEL_F5:
+                        detail = "In FSC (Boss Fight)";
+                        largeImageKey = ImageCodes.IMAGE_FIRESTORM_CITADEL_BOSS;
+                        largeImageDesc = "Firestorm Citadel (Throne Room)";
                         break;
                     case IdentCodes.IDENT_OCH:
                         detail = "In OCH";
