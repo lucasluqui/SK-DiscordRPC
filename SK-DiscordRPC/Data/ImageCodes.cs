@@ -26,5 +26,10 @@ namespace SK_DiscordRPC.Data
         public const String IMAGE_GUILDHALL = "guildhall";
         public const String IMAGE_GENERIC_CLOCKWORKS = "clockworks";
         public const String IMAGE_LOBBY = "lobby";
+        public const String IMAGE_HOI = "hoi";
+        public const String IMAGE_GITM = "gitm";
+        public const String IMAGE_C42 = "c42";
+        public const String IMAGE_LOA = "loa";
+        public const String IMAGE_MISSION = "mission";
     }
 }

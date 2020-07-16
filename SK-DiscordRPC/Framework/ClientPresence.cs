@@ -123,27 +123,27 @@ namespace SK_DiscordRPC.Framework
                         break;
                     case IdentCodes.IDENT_MISSION_LOBBY:
                         detail = "In a Mission";
-                        largeImageKey = ImageCodes.IMAGE_GENERIC_CLOCKWORKS;
+                        largeImageKey = ImageCodes.IMAGE_MISSION;
                         largeImageDesc = "Mission";
                         break;
                     case IdentCodes.IDENT_HOI_LOBBY:
                         detail = "In Heart of Ice";
-                        largeImageKey = ImageCodes.IMAGE_GENERIC_CLOCKWORKS;
+                        largeImageKey = ImageCodes.IMAGE_HOI;
                         largeImageDesc = "Danger Mission";
                         break;
                     case IdentCodes.IDENT_GITM_LOBBY:
                         detail = "In Ghosts in the Machine";
-                        largeImageKey = ImageCodes.IMAGE_GENERIC_CLOCKWORKS;
+                        largeImageKey = ImageCodes.IMAGE_GITM;
                         largeImageDesc = "Danger Mission";
                         break;
                     case IdentCodes.IDENT_C42_LOBBY:
                         detail = "In Compound 42";
-                        largeImageKey = ImageCodes.IMAGE_GENERIC_CLOCKWORKS;
+                        largeImageKey = ImageCodes.IMAGE_C42;
                         largeImageDesc = "Danger Mission";
                         break;
                     case IdentCodes.IDENT_LOA_LOBBY:
                         detail = "In Legion of Almire";
-                        largeImageKey = ImageCodes.IMAGE_GENERIC_CLOCKWORKS;
+                        largeImageKey = ImageCodes.IMAGE_LOA;
                         largeImageDesc = "Danger Mission";
                         break;
                     case IdentCodes.IDENT_TORTODRONES_LOBBY:
