@@ -153,12 +153,12 @@ namespace SK_DiscordRPC.Framework
                         break;
                     case IdentCodes.IDENT_HARVESTER_LOBBY:
                         detail = "In Apocrea";
-                        largeImageKey = ImageCodes.IMAGE_TORTODRONES;
+                        largeImageKey = ImageCodes.IMAGE_HARVESTER;
                         largeImageDesc = "Shroud of the Apocrea";
                         break;
                     case IdentCodes.IDENT_SPARKDUMP_LOBBY:
                         detail = "In GA";
-                        largeImageKey = ImageCodes.IMAGE_GENERIC_CLOCKWORKS;
+                        largeImageKey = ImageCodes.IMAGE_SPARKDUMP;
                         largeImageDesc = "Grinchlin Assault";
                         break;
                     case IdentCodes.IDENT_GLOAMING_WILDWOODS_F1:

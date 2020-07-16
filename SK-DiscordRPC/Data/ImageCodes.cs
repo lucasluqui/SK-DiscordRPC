@@ -31,5 +31,7 @@ namespace SK_DiscordRPC.Data
         public const String IMAGE_C42 = "c42";
         public const String IMAGE_LOA = "loa";
         public const String IMAGE_MISSION = "mission";
+        public const String IMAGE_HARVESTER = "harvester";
+        public const String IMAGE_SPARKDUMP = "sparkdump";
     }
 }
