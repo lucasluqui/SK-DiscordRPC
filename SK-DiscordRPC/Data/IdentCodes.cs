@@ -41,6 +41,8 @@ namespace SK_DiscordRPC.Data
         public const String IDENT_GLOAMING_WILDWOODS_F2 = "2:377";
         public const String IDENT_GLOAMING_WILDWOODS_F3 = "2:379";
         public const String IDENT_DREAMS_AND_NIGHTMARES = "2:485";
+        public const String IDENT_DREAMS_AND_NIGHTMARES_F3 = "2:486";
+        public const String IDENT_DREAMS_AND_NIGHTMARES_END = "2:487";
         public const String IDENT_ROTTING_METRO = "2:266";
         public const String IDENT_ROTTING_METRO_EX = "2:264";
         public const String IDENT_MOORCROFT_MANOR = "2:351";

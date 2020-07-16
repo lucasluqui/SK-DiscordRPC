@@ -62,7 +62,8 @@ namespace SK_DiscordRPC.Framework
                             && curIdent != IdentCodes.IDENT_HOI_LOBBY
                             && curIdent != IdentCodes.IDENT_GITM_LOBBY
                             && curIdent != IdentCodes.IDENT_C42_LOBBY
-                            && curIdent != IdentCodes.IDENT_LOA_LOBBY)
+                            && curIdent != IdentCodes.IDENT_LOA_LOBBY
+                            && curIdent != IdentCodes.IDENT_DREAMS_AND_NIGHTMARES)
                         {
                             detail = "In The Clockworks";
                             largeImageKey = ImageCodes.IMAGE_GENERIC_CLOCKWORKS;
@@ -241,9 +242,19 @@ namespace SK_DiscordRPC.Framework
                         largeImageDesc = "The Core";
                         break;
                     case IdentCodes.IDENT_DREAMS_AND_NIGHTMARES:
-                        detail = "In Dreams and Nightmares";
+                        detail = "In DaN";
                         largeImageKey = ImageCodes.IMAGE_THE_CORE;
                         largeImageDesc = "Dreams and Nightmares";
+                        break;
+                    case IdentCodes.IDENT_DREAMS_AND_NIGHTMARES_F3:
+                        detail = "In DaN (Floor 3)";
+                        largeImageKey = ImageCodes.IMAGE_THE_CORE;
+                        largeImageDesc = "Dreams and Nightmares (Descent into Darkness)";
+                        break;
+                    case IdentCodes.IDENT_DREAMS_AND_NIGHTMARES_END:
+                        detail = "In DaN (End)";
+                        largeImageKey = ImageCodes.IMAGE_THE_CORE;
+                        largeImageDesc = "Dreams and Nightmares (Refuge)";
                         break;
                     case IdentCodes.IDENT_GUILDHALL:
                         detail = "In a Guild Hall";
