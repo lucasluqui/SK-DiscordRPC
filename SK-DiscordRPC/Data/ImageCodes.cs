@@ -38,6 +38,8 @@ namespace SK_DiscordRPC.Data
         public const String IMAGE_SUBTOWN_MOORCROFT = "subtown_moorcroft";
         public const String IMAGE_SUBTOWN_EMBERLIGHT = "subtown_emberlight";
         public const String IMAGE_THE_CORE = "core";
+        public const String IMAGE_DREAMS_DESCENT = "dreams_descent";
+        public const String IMAGE_DREAMS_REFUGE = "dreams_refuge";
         public const String IMAGE_GUILDHALL = "guildhall";
         public const String IMAGE_GENERIC_CLOCKWORKS = "clockworks";
         public const String IMAGE_LOBBY = "lobby";

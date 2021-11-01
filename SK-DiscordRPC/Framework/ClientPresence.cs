@@ -65,7 +65,7 @@ namespace SK_DiscordRPC.Framework
                             && curIdent != IdentCodes.IDENT_LOA_LOBBY
                             && curIdent != IdentCodes.IDENT_DREAMS_AND_NIGHTMARES)
                         {
-                            detail = "In The Clockworks";
+                            detail = "Travelling The Clockworks";
                             largeImageKey = ImageCodes.IMAGE_GENERIC_CLOCKWORKS;
                             largeImageDesc = "The Clockworks";
                         }
@@ -83,22 +83,22 @@ namespace SK_DiscordRPC.Framework
                     case IdentCodes.IDENT_TOWN_SQUARE_EX:
                         detail = "In Town Square";
                         largeImageKey = ImageCodes.IMAGE_HAVEN_DEFAULT;
-                        largeImageDesc = "Haven";
+                        largeImageDesc = "Haven - Town Square";
                         break;
                     case IdentCodes.IDENT_BAZAAR:
                         detail = "In Bazaar";
                         largeImageKey = ImageCodes.IMAGE_HAVEN_DEFAULT_BAZAAR;
-                        largeImageDesc = "Haven";
+                        largeImageDesc = "Haven - Bazaar";
                         break;
                     case IdentCodes.IDENT_ARCADE:
                         detail = "In Arcade";
                         largeImageKey = ImageCodes.IMAGE_HAVEN_DEFAULT_ARCADE;
-                        largeImageDesc = "Haven";
+                        largeImageDesc = "Haven - Arcade";
                         break;
                     case IdentCodes.IDENT_GARRISON:
                         detail = "In Garrison";
                         largeImageKey = ImageCodes.IMAGE_HAVEN_DEFAULT_GARRISON;
-                        largeImageDesc = "Haven";
+                        largeImageDesc = "Haven - Garrison";
                         break;
                     case IdentCodes.IDENT_ARCADE_STARTPOINT:
                         detail = "Starting an Arcade run";
@@ -177,84 +177,84 @@ namespace SK_DiscordRPC.Framework
                         largeImageDesc = "Lair of the Snarbolax";
                         break;
                     case IdentCodes.IDENT_JELLY_PALACE_F1:
-                        detail = "In RJP (Floor 1)";
+                        detail = "In Royal Jelly Palace (Floor 1)";
                         largeImageKey = ImageCodes.IMAGE_JELLY_PALACE_F1;
                         largeImageDesc = "Garden of Goo";
                         break;
                     case IdentCodes.IDENT_JELLY_PALACE_F2:
-                        detail = "In RJP (Floor 2)";
+                        detail = "In Royal Jelly Palace (Floor 2)";
                         largeImageKey = ImageCodes.IMAGE_JELLY_PALACE_F2;
                         largeImageDesc = "Red Carpet Runaround";
                         break;
                     case IdentCodes.IDENT_JELLY_PALACE_F3:
-                        detail = "In RJP (Boss Fight)";
+                        detail = "In Royal Jelly Palace (Boss Fight)";
                         largeImageKey = ImageCodes.IMAGE_JELLY_PALACE_BOSS;
                         largeImageDesc = "Battle Royale";
                         break;
                     case IdentCodes.IDENT_MUNITIONS_FACTORY_F1:
-                        detail = "In IMF (Floor 1)";
+                        detail = "In Ironclaw Munitions Factory (Floor 1)";
                         largeImageKey = ImageCodes.IMAGE_MUNITIONS_FACTORY_F1;
                         largeImageDesc = "Abandoned Assembly";
                         break;
                     case IdentCodes.IDENT_MUNITIONS_FACTORY_F2:
-                        detail = "In IMF (Floor 2)";
+                        detail = "In Ironclaw Munitions Factory (Floor 2)";
                         largeImageKey = ImageCodes.IMAGE_MUNITIONS_FACTORY_F2;
                         largeImageDesc = "Warfare Workshop";
                         break;
                     case IdentCodes.IDENT_MUNITIONS_FACTORY_F3:
-                        detail = "In IMF (Boss Fight)";
+                        detail = "In Ironclaw Munitions Factory (Boss Fight)";
                         largeImageKey = ImageCodes.IMAGE_MUNITIONS_FACTORY_BOSS;
                         largeImageDesc = "The Roarmulus Twins";
                         break;
                     case IdentCodes.IDENT_FIRESTORM_CITADEL_F1:
-                        detail = "In FSC (Floor 1)";
+                        detail = "In Firestorm Citadel (Floor 1)";
                         largeImageKey = ImageCodes.IMAGE_FIRESTORM_CITADEL_F1;
                         largeImageDesc = "Blackstone Bridge";
                         break;
                     case IdentCodes.IDENT_FIRESTORM_CITADEL_F2:
-                        detail = "In FSC (Floor 2)";
+                        detail = "In Firestorm Citadel (Floor 2)";
                         largeImageKey = ImageCodes.IMAGE_FIRESTORM_CITADEL_F2;
                         largeImageDesc = "Charred Court";
                         break;
                     case IdentCodes.IDENT_FIRESTORM_CITADEL_F3:
-                        detail = "In FSC (Floor 3)";
+                        detail = "In Firestorm Citadel (Floor 3)";
                         largeImageKey = ImageCodes.IMAGE_FIRESTORM_CITADEL_F3;
                         largeImageDesc = "Ashen Armory";
                         break;
                     case IdentCodes.IDENT_FIRESTORM_CITADEL_F4:
-                        detail = "In FSC (Floor 4)";
+                        detail = "In Firestorm Citadel (Floor 4)";
                         largeImageKey = ImageCodes.IMAGE_FIRESTORM_CITADEL_F4;
                         largeImageDesc = "Smoldering Steps";
                         break;
                     case IdentCodes.IDENT_FIRESTORM_CITADEL_F5:
-                        detail = "In FSC (Boss Fight)";
+                        detail = "In Firestorm Citadel (Boss Fight)";
                         largeImageKey = ImageCodes.IMAGE_FIRESTORM_CITADEL_BOSS;
                         largeImageDesc = "Throne Room";
                         break;
                     case IdentCodes.IDENT_OCH:
-                        detail = "In OCH";
+                        detail = "In Operation Crimson Hammer";
                         largeImageKey = ImageCodes.IMAGE_OCH;
                         largeImageDesc = "Operation Crimson Hammer";
                         break;
                     case IdentCodes.IDENT_THE_CORE:
-                        detail = "In The Core";
+                        detail = "In The Core Terminal";
                         largeImageKey = ImageCodes.IMAGE_THE_CORE;
                         largeImageDesc = "The Core";
                         break;
                     case IdentCodes.IDENT_DREAMS_AND_NIGHTMARES:
-                        detail = "In DaN";
+                        detail = "In Dreams and Nightmares";
                         largeImageKey = ImageCodes.IMAGE_THE_CORE;
                         largeImageDesc = "Dreams and Nightmares";
                         break;
                     case IdentCodes.IDENT_DREAMS_AND_NIGHTMARES_F3:
-                        detail = "In DaN (Floor 3)";
-                        largeImageKey = ImageCodes.IMAGE_THE_CORE;
-                        largeImageDesc = "Dreams and Nightmares (Descent into Darkness)";
+                        detail = "In Dreams and Nightmares (Floor 3)";
+                        largeImageKey = ImageCodes.IMAGE_DREAMS_DESCENT;
+                        largeImageDesc = "Descent into Darkness";
                         break;
                     case IdentCodes.IDENT_DREAMS_AND_NIGHTMARES_END:
-                        detail = "In DaN (End)";
-                        largeImageKey = ImageCodes.IMAGE_THE_CORE;
-                        largeImageDesc = "Dreams and Nightmares (Refuge)";
+                        detail = "In Dreams and Nightmares (End)";
+                        largeImageKey = ImageCodes.IMAGE_DREAMS_REFUGE;
+                        largeImageDesc = "Refuge";
                         break;
                     case IdentCodes.IDENT_GUILDHALL:
                         detail = "In a Guild Hall";
