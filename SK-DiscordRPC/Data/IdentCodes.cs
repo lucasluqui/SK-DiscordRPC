@@ -53,5 +53,34 @@ namespace SK_DiscordRPC.Data
         public const String IDENT_GUILDHALL_GYM_T1 = "2:435";
         public const String IDENT_GUILDHALL_GYM_T2 = "2:436";
         public const String IDENT_GUILDHALL_GYM_T3 = "2:437";
+        public const String IDENT_LOCKDOWN_02 = "dungeon:m.lock_02";
+        public const String IDENT_LOCKDOWN_04 = "dungeon:m.lock_04";
+        public const String IDENT_LOCKDOWN_07 = "dungeon:m.lock_07";
+        public const String IDENT_LOCKDOWN_08 = "dungeon:m.lock_08";
+        public const String IDENT_LOCKDOWN_10 = "dungeon:m.lock_10";
+        public const String IDENT_LOCKDOWN_11 = "dungeon:m.lock_11";
+        public const String IDENT_LOCKDOWN_12 = "dungeon:m.lock_12";
+        public const String IDENT_LOCKDOWN_13 = "dungeon:m.lock_13";
+        public const String IDENT_LOCKDOWN_14 = "dungeon:m.lock_14";
+        public const String IDENT_LOCKDOWN_15 = "dungeon:m.lock_15";
+        public const String IDENT_LOCKDOWN_16 = "dungeon:m.lock_16";
+        public const String IDENT_LOCKDOWN_17 = "dungeon:m.lock_17";
+        public const String IDENT_LOCKDOWN_18 = "dungeon:m.lock_18";
+        public const String IDENT_LOCKDOWN_20 = "dungeon:m.lock_20";
+        public const String IDENT_LOCKDOWN_21 = "dungeon:m.lock_21";
+        public const String IDENT_LOCKDOWN_22 = "dungeon:m.lock_22";
+        public const String IDENT_BLAST_01 = "dungeon:m.castle_blast_01";
+        public const String IDENT_BLAST_02 = "dungeon:m.castle_blast_02";
+        public const String IDENT_BLAST_03 = "dungeon:m.castle_blast_03";
+        public const String IDENT_BLAST_04 = "dungeon:m.castle_blast_04";
+        public const String IDENT_BLAST_05 = "dungeon:m.castle_blast_05";
+        public const String IDENT_BLAST_06 = "dungeon:m.castle_blast_06";
+        public const String IDENT_BLAST_07 = "dungeon:m.castle_blast_07";
+        public const String IDENT_BLAST_08 = "dungeon:m.castle_blast_08";
+        public const String IDENT_BLAST_09 = "dungeon:m.castle_blast_09";
+        public const String IDENT_BLAST_10 = "dungeon:m.castle_blast_10";
+        public const String IDENT_BLAST_11 = "dungeon:m.castle_blast_11";
+        public const String IDENT_BLAST_12 = "dungeon:m.castle_blast_12";
+        public const String IDENT_BLAST_13 = "dungeon:m.castle_blast_13";
     }
 }

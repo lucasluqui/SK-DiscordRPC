@@ -82,22 +82,22 @@ namespace SK_DiscordRPC.Framework
                     case IdentCodes.IDENT_TOWN_SQUARE:
                     case IdentCodes.IDENT_TOWN_SQUARE_EX:
                         detail = "In Town Square";
-                        largeImageKey = ImageCodes.IMAGE_HAVEN;
+                        largeImageKey = ImageCodes.IMAGE_HAVEN_DEFAULT;
                         largeImageDesc = "Haven";
                         break;
                     case IdentCodes.IDENT_BAZAAR:
                         detail = "In Bazaar";
-                        largeImageKey = ImageCodes.IMAGE_HAVEN;
+                        largeImageKey = ImageCodes.IMAGE_HAVEN_DEFAULT_BAZAAR;
                         largeImageDesc = "Haven";
                         break;
                     case IdentCodes.IDENT_ARCADE:
                         detail = "In Arcade";
-                        largeImageKey = ImageCodes.IMAGE_HAVEN;
+                        largeImageKey = ImageCodes.IMAGE_HAVEN_DEFAULT_ARCADE;
                         largeImageDesc = "Haven";
                         break;
                     case IdentCodes.IDENT_GARRISON:
                         detail = "In Garrison";
-                        largeImageKey = ImageCodes.IMAGE_HAVEN;
+                        largeImageKey = ImageCodes.IMAGE_HAVEN_DEFAULT_GARRISON;
                         largeImageDesc = "Haven";
                         break;
                     case IdentCodes.IDENT_ARCADE_STARTPOINT:
@@ -113,12 +113,12 @@ namespace SK_DiscordRPC.Framework
                         break;
                     case IdentCodes.IDENT_MOORCROFT_MANOR:
                         detail = "In Moorcroft Manor";
-                        largeImageKey = ImageCodes.IMAGE_SUBTOWN;
+                        largeImageKey = ImageCodes.IMAGE_SUBTOWN_MOORCROFT;
                         largeImageDesc = "Moorcroft Manor";
                         break;
                     case IdentCodes.IDENT_EMBERLIGHT:
                         detail = "In Emberlight";
-                        largeImageKey = ImageCodes.IMAGE_SUBTOWN;
+                        largeImageKey = ImageCodes.IMAGE_SUBTOWN_EMBERLIGHT;
                         largeImageDesc = "Emberlight";
                         break;
                     case IdentCodes.IDENT_MISSION_LOBBY:
@@ -157,79 +157,79 @@ namespace SK_DiscordRPC.Framework
                         largeImageDesc = "Shroud of the Apocrea";
                         break;
                     case IdentCodes.IDENT_SPARKDUMP_LOBBY:
-                        detail = "In GA";
+                        detail = "In Grinchlin Assault";
                         largeImageKey = ImageCodes.IMAGE_SPARKDUMP;
                         largeImageDesc = "Grinchlin Assault";
                         break;
                     case IdentCodes.IDENT_GLOAMING_WILDWOODS_F1:
-                        detail = "In GWW (Floor 1)";
-                        largeImageKey = ImageCodes.IMAGE_GLOAMING_WILDWOODS;
-                        largeImageDesc = "Gloaming Wildwoods (Terrilous Trail)";
+                        detail = "In Gloaming Wildwoods (Floor 1)";
+                        largeImageKey = ImageCodes.IMAGE_GLOAMING_WILDWOODS_F1;
+                        largeImageDesc = "Terrilous Trail";
                         break;
                     case IdentCodes.IDENT_GLOAMING_WILDWOODS_F2:
-                        detail = "In GWW (Floor 2)";
-                        largeImageKey = ImageCodes.IMAGE_GLOAMING_WILDWOODS;
-                        largeImageDesc = "Gloaming Wildwoods (Roarsterous Ruins)";
+                        detail = "In Gloaming Wildwoods (Floor 2)";
+                        largeImageKey = ImageCodes.IMAGE_GLOAMING_WILDWOODS_F2;
+                        largeImageDesc = "Roarsterous Ruins";
                         break;
                     case IdentCodes.IDENT_GLOAMING_WILDWOODS_F3:
-                        detail = "In GWW (Boss Fight)";
+                        detail = "In Gloaming Wildwoods (Boss Fight)";
                         largeImageKey = ImageCodes.IMAGE_GLOAMING_WILDWOODS_BOSS;
-                        largeImageDesc = "Gloaming Wildwoods (Lair of the Snarbolax)";
+                        largeImageDesc = "Lair of the Snarbolax";
                         break;
                     case IdentCodes.IDENT_JELLY_PALACE_F1:
                         detail = "In RJP (Floor 1)";
-                        largeImageKey = ImageCodes.IMAGE_JELLY_PALACE;
-                        largeImageDesc = "Royal Jelly Palace (Garden of Goo)";
+                        largeImageKey = ImageCodes.IMAGE_JELLY_PALACE_F1;
+                        largeImageDesc = "Garden of Goo";
                         break;
                     case IdentCodes.IDENT_JELLY_PALACE_F2:
                         detail = "In RJP (Floor 2)";
-                        largeImageKey = ImageCodes.IMAGE_JELLY_PALACE;
-                        largeImageDesc = "Royal Jelly Palace (Red Carpet Runaround)";
+                        largeImageKey = ImageCodes.IMAGE_JELLY_PALACE_F2;
+                        largeImageDesc = "Red Carpet Runaround";
                         break;
                     case IdentCodes.IDENT_JELLY_PALACE_F3:
                         detail = "In RJP (Boss Fight)";
                         largeImageKey = ImageCodes.IMAGE_JELLY_PALACE_BOSS;
-                        largeImageDesc = "Royal Jelly Palace (Battle Royale)";
+                        largeImageDesc = "Battle Royale";
                         break;
                     case IdentCodes.IDENT_MUNITIONS_FACTORY_F1:
                         detail = "In IMF (Floor 1)";
-                        largeImageKey = ImageCodes.IMAGE_MUNITIONS_FACTORY;
-                        largeImageDesc = "Iron Munitions Factory (Abandoned Assembly)";
+                        largeImageKey = ImageCodes.IMAGE_MUNITIONS_FACTORY_F1;
+                        largeImageDesc = "Abandoned Assembly";
                         break;
                     case IdentCodes.IDENT_MUNITIONS_FACTORY_F2:
                         detail = "In IMF (Floor 2)";
-                        largeImageKey = ImageCodes.IMAGE_MUNITIONS_FACTORY;
-                        largeImageDesc = "Iron Munitions Factory (Warfare Workshop)";
+                        largeImageKey = ImageCodes.IMAGE_MUNITIONS_FACTORY_F2;
+                        largeImageDesc = "Warfare Workshop";
                         break;
                     case IdentCodes.IDENT_MUNITIONS_FACTORY_F3:
                         detail = "In IMF (Boss Fight)";
                         largeImageKey = ImageCodes.IMAGE_MUNITIONS_FACTORY_BOSS;
-                        largeImageDesc = "Iron Munitions Factory (The Roarmulus Twins)";
+                        largeImageDesc = "The Roarmulus Twins";
                         break;
                     case IdentCodes.IDENT_FIRESTORM_CITADEL_F1:
                         detail = "In FSC (Floor 1)";
-                        largeImageKey = ImageCodes.IMAGE_FIRESTORM_CITADEL;
-                        largeImageDesc = "Firestorm Citadel (Blackstone Bridge)";
+                        largeImageKey = ImageCodes.IMAGE_FIRESTORM_CITADEL_F1;
+                        largeImageDesc = "Blackstone Bridge";
                         break;
                     case IdentCodes.IDENT_FIRESTORM_CITADEL_F2:
                         detail = "In FSC (Floor 2)";
-                        largeImageKey = ImageCodes.IMAGE_FIRESTORM_CITADEL;
-                        largeImageDesc = "Firestorm Citadel (Charred Court)";
+                        largeImageKey = ImageCodes.IMAGE_FIRESTORM_CITADEL_F2;
+                        largeImageDesc = "Charred Court";
                         break;
                     case IdentCodes.IDENT_FIRESTORM_CITADEL_F3:
                         detail = "In FSC (Floor 3)";
-                        largeImageKey = ImageCodes.IMAGE_FIRESTORM_CITADEL;
-                        largeImageDesc = "Firestorm Citadel (Ashen Armory)";
+                        largeImageKey = ImageCodes.IMAGE_FIRESTORM_CITADEL_F3;
+                        largeImageDesc = "Ashen Armory";
                         break;
                     case IdentCodes.IDENT_FIRESTORM_CITADEL_F4:
                         detail = "In FSC (Floor 4)";
-                        largeImageKey = ImageCodes.IMAGE_FIRESTORM_CITADEL;
-                        largeImageDesc = "Firestorm Citadel (Smoldering Steps)";
+                        largeImageKey = ImageCodes.IMAGE_FIRESTORM_CITADEL_F4;
+                        largeImageDesc = "Smoldering Steps";
                         break;
                     case IdentCodes.IDENT_FIRESTORM_CITADEL_F5:
                         detail = "In FSC (Boss Fight)";
                         largeImageKey = ImageCodes.IMAGE_FIRESTORM_CITADEL_BOSS;
-                        largeImageDesc = "Firestorm Citadel (Throne Room)";
+                        largeImageDesc = "Throne Room";
                         break;
                     case IdentCodes.IDENT_OCH:
                         detail = "In OCH";
@@ -267,6 +267,151 @@ namespace SK_DiscordRPC.Framework
                         detail = "In a Guild Training Hall";
                         largeImageKey = ImageCodes.IMAGE_GENERIC_CLOCKWORKS;
                         largeImageDesc = "A Guild Training Hall";
+                        break;
+                    case IdentCodes.IDENT_LOCKDOWN_02:
+                        detail = "In Lockdown (Ruins)";
+                        largeImageKey = ImageCodes.IMAGE_LOCKDOWN_RUINS;
+                        largeImageDesc = "Lockdown";
+                        break;
+                    case IdentCodes.IDENT_LOCKDOWN_04:
+                        detail = "In Lockdown (Facility)";
+                        largeImageKey = ImageCodes.IMAGE_LOCKDOWN_FACILITY;
+                        largeImageDesc = "Lockdown";
+                        break;
+                    case IdentCodes.IDENT_LOCKDOWN_07:
+                        detail = "In Lockdown (Reactor)";
+                        largeImageKey = ImageCodes.IMAGE_LOCKDOWN_REACTOR;
+                        largeImageDesc = "Lockdown";
+                        break;
+                    case IdentCodes.IDENT_LOCKDOWN_08:
+                        detail = "In Lockdown (Forest)";
+                        largeImageKey = ImageCodes.IMAGE_LOCKDOWN_FOREST;
+                        largeImageDesc = "Lockdown";
+                        break;
+                    case IdentCodes.IDENT_LOCKDOWN_10:
+                        detail = "In Lockdown (Necropolis)";
+                        largeImageKey = ImageCodes.IMAGE_LOCKDOWN_NECROPOLIS;
+                        largeImageDesc = "Lockdown";
+                        break;
+                    case IdentCodes.IDENT_LOCKDOWN_11:
+                        detail = "In Lockdown (Furnace)";
+                        largeImageKey = ImageCodes.IMAGE_LOCKDOWN_FURNACE;
+                        largeImageDesc = "Lockdown";
+                        break;
+                    case IdentCodes.IDENT_LOCKDOWN_12:
+                        detail = "In Lockdown (Ramparts)";
+                        largeImageKey = ImageCodes.IMAGE_LOCKDOWN_RAMPARTS;
+                        largeImageDesc = "Lockdown";
+                        break;
+                    case IdentCodes.IDENT_LOCKDOWN_13:
+                        detail = "In Lockdown (Downtown)";
+                        largeImageKey = ImageCodes.IMAGE_LOCKDOWN_DOWNTOWN;
+                        largeImageDesc = "Lockdown";
+                        break;
+                    case IdentCodes.IDENT_LOCKDOWN_14:
+                        detail = "In Lockdown (Pipeline)";
+                        largeImageKey = ImageCodes.IMAGE_LOCKDOWN_PIPELINE;
+                        largeImageDesc = "Lockdown";
+                        break;
+                    case IdentCodes.IDENT_LOCKDOWN_15:
+                        detail = "In Lockdown (Icebox)";
+                        largeImageKey = ImageCodes.IMAGE_LOCKDOWN_ICEBOX;
+                        largeImageDesc = "Lockdown";
+                        break;
+                    case IdentCodes.IDENT_LOCKDOWN_16:
+                        detail = "In Lockdown (Frostbite)";
+                        largeImageKey = ImageCodes.IMAGE_LOCKDOWN_FROSTBITE;
+                        largeImageDesc = "Lockdown";
+                        break;
+                    case IdentCodes.IDENT_LOCKDOWN_17:
+                        detail = "In Lockdown (Stadium)";
+                        largeImageKey = ImageCodes.IMAGE_LOCKDOWN_STADIUM;
+                        largeImageDesc = "Lockdown";
+                        break;
+                    case IdentCodes.IDENT_LOCKDOWN_18:
+                        detail = "In Lockdown (Gardens)";
+                        largeImageKey = ImageCodes.IMAGE_LOCKDOWN_GARDENS;
+                        largeImageDesc = "Lockdown";
+                        break;
+                    case IdentCodes.IDENT_LOCKDOWN_20:
+                        detail = "In Lockdown (Mines)";
+                        largeImageKey = ImageCodes.IMAGE_LOCKDOWN_MINES;
+                        largeImageDesc = "Lockdown";
+                        break;
+                    case IdentCodes.IDENT_LOCKDOWN_21:
+                        detail = "In Lockdown (Avenue)";
+                        largeImageKey = ImageCodes.IMAGE_LOCKDOWN_AVENUE;
+                        largeImageDesc = "Lockdown";
+                        break;
+                    case IdentCodes.IDENT_LOCKDOWN_22:
+                        detail = "In Lockdown (Fortress)";
+                        largeImageKey = ImageCodes.IMAGE_LOCKDOWN_FORTRESS;
+                        largeImageDesc = "Lockdown";
+                        break;
+                    case IdentCodes.IDENT_BLAST_01:
+                        detail = "In Blast Network (Gridlock)";
+                        largeImageKey = ImageCodes.IMAGE_BLAST_GRIDLOCK;
+                        largeImageDesc = "Blast Network";
+                        break;
+                    case IdentCodes.IDENT_BLAST_02:
+                        detail = "In Blast Network (Rockets)";
+                        largeImageKey = ImageCodes.IMAGE_BLAST_ROCKETS;
+                        largeImageDesc = "Blast Network";
+                        break;
+                    case IdentCodes.IDENT_BLAST_03:
+                        detail = "In Blast Network (Gridlock 2)";
+                        largeImageKey = ImageCodes.IMAGE_BLAST_GRIDLOCK2;
+                        largeImageDesc = "Blast Network";
+                        break;
+                    case IdentCodes.IDENT_BLAST_04:
+                        detail = "In Blast Network (Rockets 2)";
+                        largeImageKey = ImageCodes.IMAGE_BLAST_ROCKETS2;
+                        largeImageDesc = "Blast Network";
+                        break;
+                    case IdentCodes.IDENT_BLAST_05:
+                        detail = "In Blast Network (Two-Tone)";
+                        largeImageKey = ImageCodes.IMAGE_BLAST_TWOTONE;
+                        largeImageDesc = "Blast Network";
+                        break;
+                    case IdentCodes.IDENT_BLAST_06:
+                        detail = "In Blast Network (Division)";
+                        largeImageKey = ImageCodes.IMAGE_BLAST_DIVISION;
+                        largeImageDesc = "Blast Network";
+                        break;
+                    case IdentCodes.IDENT_BLAST_07:
+                        detail = "In Blast Network (Stone Cross)";
+                        largeImageKey = ImageCodes.IMAGE_BLAST_STONECROSS;
+                        largeImageDesc = "Blast Network";
+                        break;
+                    case IdentCodes.IDENT_BLAST_08:
+                        detail = "In Blast Network (Spikes)";
+                        largeImageKey = ImageCodes.IMAGE_BLAST_SPIKES;
+                        largeImageDesc = "Blast Network";
+                        break;
+                    case IdentCodes.IDENT_BLAST_09:
+                        detail = "In Blast Network (Ring)";
+                        largeImageKey = ImageCodes.IMAGE_BLAST_RING;
+                        largeImageDesc = "Blast Network";
+                        break;
+                    case IdentCodes.IDENT_BLAST_10:
+                        detail = "In Blast Network (Crystals)";
+                        largeImageKey = ImageCodes.IMAGE_BLAST_CRYSTALS;
+                        largeImageDesc = "Blast Network";
+                        break;
+                    case IdentCodes.IDENT_BLAST_11:
+                        detail = "In Blast Network (Islands)";
+                        largeImageKey = ImageCodes.IMAGE_BLAST_ISLANDS;
+                        largeImageDesc = "Blast Network";
+                        break;
+                    case IdentCodes.IDENT_BLAST_12:
+                        detail = "In Blast Network (Backdoor)";
+                        largeImageKey = ImageCodes.IMAGE_BLAST_BACKDOOR;
+                        largeImageDesc = "Blast Network";
+                        break;
+                    case IdentCodes.IDENT_BLAST_13:
+                        detail = "In Blast Network (Crystals 2)";
+                        largeImageKey = ImageCodes.IMAGE_BLAST_CRYSTALS2;
+                        largeImageDesc = "Blast Network";
                         break;
                     default:
                         return;

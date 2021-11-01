@@ -8,12 +8,25 @@ namespace SK_DiscordRPC.Data
     public class ImageCodes
     {
         public const String IMAGE_READY_ROOM = "ready_room";
-        public const String IMAGE_HAVEN = "haven_default";
+        public const String IMAGE_HAVEN_DEFAULT = "haven_default";
+        public const String IMAGE_HAVEN_DEFAULT_BAZAAR = "haven_default_bazaar";
+        public const String IMAGE_HAVEN_DEFAULT_ARCADE = "haven_default_arcade";
+        public const String IMAGE_HAVEN_DEFAULT_GARRISON = "haven_default_garrison";
         public const String IMAGE_TERMINAL = "terminal";
         public const String IMAGE_FIRESTORM_CITADEL = "fsc";
+        public const String IMAGE_FIRESTORM_CITADEL_F1 = "fsc_f1";
+        public const String IMAGE_FIRESTORM_CITADEL_F2 = "fsc_f2";
+        public const String IMAGE_FIRESTORM_CITADEL_F3 = "fsc_f3";
+        public const String IMAGE_FIRESTORM_CITADEL_F4 = "fsc_f4";
         public const String IMAGE_MUNITIONS_FACTORY = "imf";
+        public const String IMAGE_MUNITIONS_FACTORY_F1 = "imf_f1";
+        public const String IMAGE_MUNITIONS_FACTORY_F2 = "imf_f2";
         public const String IMAGE_JELLY_PALACE = "rjp";
+        public const String IMAGE_JELLY_PALACE_F1 = "rjp_f1";
+        public const String IMAGE_JELLY_PALACE_F2 = "rjp_f2";
         public const String IMAGE_GLOAMING_WILDWOODS = "gww";
+        public const String IMAGE_GLOAMING_WILDWOODS_F1 = "gww_f1";
+        public const String IMAGE_GLOAMING_WILDWOODS_F2 = "gww_f2";
         public const String IMAGE_FIRESTORM_CITADEL_BOSS = "fsc_boss";
         public const String IMAGE_MUNITIONS_FACTORY_BOSS = "imf_boss";
         public const String IMAGE_JELLY_PALACE_BOSS = "rjp_boss";
@@ -22,6 +35,8 @@ namespace SK_DiscordRPC.Data
         public const String IMAGE_TORTODRONES = "tortos";
         public const String IMAGE_ROTTING_METRO = "metro";
         public const String IMAGE_SUBTOWN = "subtown";
+        public const String IMAGE_SUBTOWN_MOORCROFT = "subtown_moorcroft";
+        public const String IMAGE_SUBTOWN_EMBERLIGHT = "subtown_emberlight";
         public const String IMAGE_THE_CORE = "core";
         public const String IMAGE_GUILDHALL = "guildhall";
         public const String IMAGE_GENERIC_CLOCKWORKS = "clockworks";
@@ -33,5 +48,36 @@ namespace SK_DiscordRPC.Data
         public const String IMAGE_MISSION = "mission";
         public const String IMAGE_HARVESTER = "harvester";
         public const String IMAGE_SPARKDUMP = "sparkdump";
+        public const String IMAGE_LOCKDOWN = "lockdown";
+        public const String IMAGE_LOCKDOWN_RUINS = "lockdown_ruins";
+        public const String IMAGE_LOCKDOWN_FACILITY = "lockdown_facility";
+        public const String IMAGE_LOCKDOWN_REACTOR = "lockdown_reactor";
+        public const String IMAGE_LOCKDOWN_FOREST = "lockdown_forest";
+        public const String IMAGE_LOCKDOWN_NECROPOLIS = "lockdown_necropolis";
+        public const String IMAGE_LOCKDOWN_FURNACE = "lockdown_furnace";
+        public const String IMAGE_LOCKDOWN_RAMPARTS = "lockdown_ramparts";
+        public const String IMAGE_LOCKDOWN_DOWNTOWN = "lockdown_downtown";
+        public const String IMAGE_LOCKDOWN_PIPELINE = "lockdown_pipeline";
+        public const String IMAGE_LOCKDOWN_ICEBOX = "lockdown_icebox";
+        public const String IMAGE_LOCKDOWN_FROSTBITE = "lockdown_frostbite";
+        public const String IMAGE_LOCKDOWN_STADIUM = "lockdown_stadium";
+        public const String IMAGE_LOCKDOWN_GARDENS = "lockdown_gardens";
+        public const String IMAGE_LOCKDOWN_MINES = "lockdown_mines";
+        public const String IMAGE_LOCKDOWN_AVENUE = "lockdown_avenue";
+        public const String IMAGE_LOCKDOWN_FORTRESS = "lockdown_fortress";
+        public const String IMAGE_BLAST = "blast";
+        public const String IMAGE_BLAST_GRIDLOCK = "blast_gridlock";
+        public const String IMAGE_BLAST_ROCKETS = "blast_rockets";
+        public const String IMAGE_BLAST_GRIDLOCK2 = "blast_gridlock2";
+        public const String IMAGE_BLAST_ROCKETS2 = "blast_rockets2";
+        public const String IMAGE_BLAST_TWOTONE = "blast_twotone";
+        public const String IMAGE_BLAST_DIVISION = "blast_division";
+        public const String IMAGE_BLAST_STONECROSS = "blast_stonecross";
+        public const String IMAGE_BLAST_SPIKES = "blast_spikes";
+        public const String IMAGE_BLAST_RING = "blast_ring";
+        public const String IMAGE_BLAST_CRYSTALS = "blast_crystals";
+        public const String IMAGE_BLAST_ISLANDS = "blast_islands";
+        public const String IMAGE_BLAST_BACKDOOR = "blast_backdoor";
+        public const String IMAGE_BLAST_CRYSTALS2 = "blast_crystals2";
     }
 }

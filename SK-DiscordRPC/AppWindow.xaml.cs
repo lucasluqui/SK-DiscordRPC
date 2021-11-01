@@ -29,7 +29,7 @@ namespace SK_DiscordRPC
         {
             InitializeComponent();
             tb = (TaskbarIcon)FindName("TrayIcon");
-            tb.ShowBalloonTip("Knight Launcher (In-game RPC)", "Now running in tray bar, you can configure or exit the module there.", BalloonIcon.None);
+            tb.ShowBalloonTip("Now running in tray bar", "You can configure or exit the module there.", BalloonIcon.None);
 
             if (Properties.Settings.Default.ShowKnight)
             {
@@ -53,11 +53,11 @@ namespace SK_DiscordRPC
             client.Logger = new ConsoleLogger() { Level = LogLevel.Warning };
             client.OnReady += (sender, e) =>
             {
-                Console.WriteLine("ready recv: {0}", e.User.Username);
+                Console.WriteLine("ready received for: {0}", e.User.Username);
             };
             client.OnPresenceUpdate += (sender, e) =>
             {
-                Console.WriteLine("update: {0}", e.Presence);
+                Console.WriteLine("updated: {0}", e.Presence);
             };
             client.Initialize();
             client.SetPresence(new RichPresence()
@@ -106,18 +106,13 @@ namespace SK_DiscordRPC
             }
             else
             {
-                presenceTicker.Dispose();
-                client.Deinitialize();
-                client.Dispose();
-                Properties.Settings.Default.Save();
-                Environment.Exit(0);
+                shutdownRoutine();
             }
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
-            Properties.Settings.Default.Save();
-            Environment.Exit(0);
+            shutdownRoutine();
         }
 
         private void ShowKnight_Click(object sender, RoutedEventArgs e)
@@ -134,6 +129,14 @@ namespace SK_DiscordRPC
                 ShowKnightItem.IsChecked = true;
                 Properties.Settings.Default.Save();
             }
+        }
+
+        private void shutdownRoutine() { 
+            presenceTicker.Dispose();
+            client.Deinitialize();
+            client.Dispose();
+            Properties.Settings.Default.Save();
+            Environment.Exit(0);
         }
 
     }

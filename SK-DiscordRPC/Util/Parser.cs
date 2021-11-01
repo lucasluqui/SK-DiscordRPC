@@ -26,17 +26,24 @@ namespace SK_DiscordRPC.Util
                     {
                         string rawWhereabout = line.Split('(')[1].Replace(')', '\0').Replace(' ', '\0').Replace('.', '\0');
                         string[] arrWhereabout = rawWhereabout.Split(',');
+                        
+                        // Checks for guild halls
                         if (arrWhereabout[0].Contains("4:"))
-                        /* 
-                        Guild Hall instances are structured as 4:******, so we'll check if it matches here.
-                        */
                         {
                             w.setIdent("4:4");
                         }
+                       
                         else
                         {
                             w.setIdent(arrWhereabout[0]);
                         }
+                    }
+
+                    if (line.Contains("ArenaSceneConfig"))
+                    { 
+                        string rawArenaWhereabout = line.Split('%')[1].Split('/')[0];
+                        Console.WriteLine(rawArenaWhereabout);
+                        w.setIdent(rawArenaWhereabout);
                     }
                 }
             }
@@ -51,7 +58,12 @@ namespace SK_DiscordRPC.Util
             {
                 if (!String.IsNullOrEmpty(process.MainWindowTitle) && process.MainWindowTitle.Contains("Spiral"))
                 {
-                    knightName = process.MainWindowTitle.Split(new string[] {" - "}, StringSplitOptions.None)[1].Trim();
+                    try
+                    {
+                        knightName = process.MainWindowTitle.Split(new string[] { " - " }, StringSplitOptions.None)[1].Trim();
+                    }
+                    catch { }
+                    
                 }
             }
             return knightName;
