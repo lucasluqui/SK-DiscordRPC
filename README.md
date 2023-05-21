@@ -1,2 +1,2 @@
 # SK-DiscordRPC
-Discord Rich Presence for Spiral Knights.
+Discord Rich Presence for a certain game.
