@@ -17,7 +17,7 @@ namespace SK_DiscordRPC.Framework
         {
             if (Properties.Settings.Default.ShowKnight)
             {
-                AppWindow.client.SetPresence(new RichPresence()
+                AppWindow.discordClient.SetPresence(new RichPresence()
                 {
                     Details = detail,
                     Timestamps = Timestamps.Now,
@@ -32,7 +32,7 @@ namespace SK_DiscordRPC.Framework
             }
             else
             {
-                AppWindow.client.SetPresence(new RichPresence()
+                AppWindow.discordClient.SetPresence(new RichPresence()
                 {
                     Details = detail,
                     Timestamps = Timestamps.Now,

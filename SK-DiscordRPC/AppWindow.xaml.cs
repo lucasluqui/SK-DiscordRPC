@@ -16,14 +16,14 @@ namespace SK_DiscordRPC
     {
         public static TaskbarIcon tb;
 
-        public static DiscordRpcClient client;
+        public static DiscordRpcClient discordClient;
+        private string DISCORD_CLIENT_ID = "626524043209867274";
+
+        private const int CHECK_INTERVAL_SECONDS = 5;
+        private Timer presenceTicker = new Timer(CHECK_INTERVAL_SECONDS * 1000);
+        private Timer gameTicker = new Timer(CHECK_INTERVAL_SECONDS * 1000);
+
         public static Whereabout curWhere = new Whereabout();
-
-        private const int interval = 5;
-        private Timer presenceTicker = new Timer(interval * 1000);
-        private Timer gameTicker = new Timer(interval * 1000);
-
-        private string CLIENT_ID = "626524043209867274";
 
         public AppWindow()
         {
@@ -49,18 +49,18 @@ namespace SK_DiscordRPC
 
         public void SetupRPC()
         {
-            client = new DiscordRpcClient(CLIENT_ID);
-            client.Logger = new ConsoleLogger() { Level = LogLevel.Warning };
-            client.OnReady += (sender, e) =>
+            discordClient = new DiscordRpcClient(DISCORD_CLIENT_ID);
+            discordClient.Logger = new ConsoleLogger() { Level = LogLevel.Warning };
+            discordClient.OnReady += (sender, e) =>
             {
                 Console.WriteLine("ready received for: {0}", e.User.Username);
             };
-            client.OnPresenceUpdate += (sender, e) =>
+            discordClient.OnPresenceUpdate += (sender, e) =>
             {
                 Console.WriteLine("updated: {0}", e.Presence);
             };
-            client.Initialize();
-            client.SetPresence(new RichPresence()
+            discordClient.Initialize();
+            discordClient.SetPresence(new RichPresence()
             {
                 Details = "",
                 State = "",
@@ -133,9 +133,18 @@ namespace SK_DiscordRPC
 
         private void shutdownRoutine() { 
             presenceTicker.Dispose();
-            client.Deinitialize();
-            client.Dispose();
+
+            discordClient.Deinitialize();
+            discordClient.Dispose();
+
             Properties.Settings.Default.Save();
+
+            tb.Visibility = Visibility.Hidden;
+            tb.Icon.Dispose();
+            tb.Dispose();
+
+            Close();
+
             Environment.Exit(0);
         }
 
