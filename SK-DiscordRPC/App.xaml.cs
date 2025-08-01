@@ -13,6 +13,7 @@ namespace SK_DiscordRPC
     {
         private void AppWindow_OnExit (object sender, ExitEventArgs e)
         {
+            // For fucks sake please work.
             AppWindow.taskbarIcon.Visibility = Visibility.Hidden;
             AppWindow.taskbarIcon.Icon.Dispose();
             AppWindow.taskbarIcon.Dispose();

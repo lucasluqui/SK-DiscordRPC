@@ -145,6 +145,9 @@ namespace SK_DiscordRPC
             // Save any settings that have been changed.
             Properties.Settings.Default.Save();
 
+            // Hide the taskbar icon and dispose of it.
+            // For some reason, the icon will sometimes linger in the tray bar. God knows why.
+            // If you happen to have any leads, please feel free to open a pull request.
             taskbarIcon.Visibility = Visibility.Hidden;
             taskbarIcon.Icon.Dispose();
             taskbarIcon.Dispose();
