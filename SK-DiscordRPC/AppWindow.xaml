@@ -10,7 +10,7 @@
         Visibility="Hidden">
 
     <Grid>
-        <tb:TaskbarIcon x:Name="TrayIcon" IconSource="/Resources/tray.ico" ToolTipText="Knight Launcher Discord Rich Presence">
+        <tb:TaskbarIcon x:Name="TrayIcon" IconSource="/Resources/tray.ico" ToolTipText="Knight Launcher Discord RPC module">
             <tb:TaskbarIcon.ContextMenu>
                 <ContextMenu>
                     <MenuItem x:Name="ShowKnightItem" Header="Show knight name" Click="ShowKnight_Click" IsChecked="False"/>
