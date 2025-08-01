@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Text;
 
 using DiscordRPC;
@@ -17,11 +19,15 @@ namespace SK_DiscordRPC.Framework
 
         private static void set (string detail, string largeImageKey, string largeImageDesc)
         {
+            System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
+
             if (Properties.Settings.Default.ShowKnight)
             {
                 AppWindow.discordClient.SetPresence(new RichPresence()
                 {
+                    Type = ActivityType.Playing,
                     Details = detail,
+                    State = "(KL v" + AppWindow.KL_VERSION + ", RPC v" + AssemblyName.GetAssemblyName(assembly.Location).Version.ToString() + ")",
                     Timestamps = Timestamps.Now,
                     Assets = new Assets()
                     {
@@ -29,6 +35,13 @@ namespace SK_DiscordRPC.Framework
                         LargeImageText = largeImageDesc,
                         SmallImageKey = "knight",
                         SmallImageText = "Knight: " + knightName
+                    },
+                    Buttons = new Button[]
+                    {
+                        new Button() { 
+                            Label = "Get Knight Launcher", 
+                            Url = "https://github.com/lucasluqui/KnightLauncher"
+                        }
                     }
                 });
             }
@@ -36,12 +49,21 @@ namespace SK_DiscordRPC.Framework
             {
                 AppWindow.discordClient.SetPresence(new RichPresence()
                 {
+                    Type = ActivityType.Playing,
                     Details = detail,
+                    State = "(KL v" + AppWindow.KL_VERSION + ", RPC v" + AssemblyName.GetAssemblyName(assembly.Location).Version.ToString() + ")",
                     Timestamps = Timestamps.Now,
                     Assets = new Assets()
                     {
                         LargeImageKey = largeImageKey,
                         LargeImageText = largeImageDesc
+                    },
+                    Buttons = new Button[]
+                    {
+                        new Button() {
+                            Label = "Get Knight Launcher",
+                            Url = "https://github.com/lucasluqui/KnightLauncher"
+                        }
                     }
                 });
             }

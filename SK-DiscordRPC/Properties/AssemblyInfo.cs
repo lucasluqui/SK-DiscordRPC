@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Windows;
 
-[assembly: AssemblyTitle("Knight Launcher In-game RPC Module")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Knight Launcher Discord RPC module")]
+[assembly: AssemblyDescription("Knight Launcher Discord RPC module for Spiral Knights.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Knight Launcher In-game RPC Module")]
-[assembly: AssemblyCopyright("Copyright ©  2020>")]
+[assembly: AssemblyCompany("Knight Launcher")]
+[assembly: AssemblyProduct("Knight Launcher Discord RPC module")]
+[assembly: AssemblyCopyright("https://github.com/lucasluqui/SK-DiscordRPC/blob/main/LICENSE")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
@@ -19,5 +19,5 @@ using System.Windows;
     ResourceDictionaryLocation.SourceAssembly
 )]
 
-[assembly: AssemblyVersion("0.0.8")]
-[assembly: AssemblyFileVersion("0.0.8")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]

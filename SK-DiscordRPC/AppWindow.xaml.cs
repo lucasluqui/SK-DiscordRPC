@@ -1,21 +1,22 @@
 ﻿using System;
+using System.IO;
+using System.Reflection;
 using System.Timers;
 using System.Windows;
 using System.Windows.Controls;
-
 using DiscordRPC;
 using DiscordRPC.Logging;
-
 using Hardcodet.Wpf.TaskbarNotification;
-
-using SK_DiscordRPC.Util;
 using SK_DiscordRPC.Data;
 using SK_DiscordRPC.Framework;
+using SK_DiscordRPC.Util;
 
 namespace SK_DiscordRPC
 {
     public partial class AppWindow : Window
     {
+        public static string KL_VERSION = "undefined";
+
         public static DiscordRpcClient discordClient;
         private string DISCORD_CLIENT_ID = "626524043209867274";
 
@@ -30,6 +31,8 @@ namespace SK_DiscordRPC
         public AppWindow ()
         {
             InitializeComponent();
+            SetupLogging();
+
             taskbarIcon = (TaskbarIcon) FindName("TrayIcon");
             taskbarIcon.ShowBalloonTip(
                 "Now running in tray bar", "You can configure or exit the module there.", BalloonIcon.None);
@@ -42,12 +45,26 @@ namespace SK_DiscordRPC
 
             if (Parser.isGameRunning())
             {
+                Console.WriteLine("[skdiscord-rpc] Detected game running, starting RPC");
                 SetupRPC();
             }
             else
             {
+                Console.WriteLine("[skdiscord-rpc] Game not running, started ticker");
                 InitGameTicker();
             }
+        }
+
+        public void SetupLogging ()
+        {
+            String logFile = System.AppDomain.CurrentDomain.BaseDirectory + "skdiscordrpc.log";
+            if (File.Exists(logFile)) 
+            {
+                File.Delete(logFile);
+            }
+            var writer = new StreamWriter(logFile) { AutoFlush = true };
+            Console.SetOut(writer);
+            Console.SetError(writer);
         }
 
         public void SetupRPC ()
@@ -95,9 +112,15 @@ namespace SK_DiscordRPC
 
         private void OnGameTimedEvent (object sender, EventArgs e)
         {
+            Console.WriteLine("[skdiscord-rpc] Checking for game process...");
             if (Parser.isGameRunning())
             {
+                Console.WriteLine("[skdiscord-rpc] Detected game running, starting RPC");
                 SetupRPC();
+            }
+            else 
+            {
+                Console.WriteLine("[skdiscord-rpc] Game not running yet, checking again next tick");
             }
         }
 
@@ -109,6 +132,7 @@ namespace SK_DiscordRPC
             }
             else
             {
+                Console.WriteLine("[skdiscord-rpc] Detected game shutdown, stopping RPC");
                 shutdown();
             }
         }
@@ -135,26 +159,41 @@ namespace SK_DiscordRPC
         }
 
         private void shutdown () { 
+            Console.WriteLine("[skdiscord-rpc] Starting shutdown process...");
+
             // Dispose of the presence ticker.
             presenceTicker.Dispose();
-
-            // Dispose of the Discord Client object.
-            discordClient.Deinitialize();
-            discordClient.Dispose();
+            Console.WriteLine("[skdiscord-rpc] Presence ticker disposed.");
 
             // Save any settings that have been changed.
             Properties.Settings.Default.Save();
+            Console.WriteLine("[skdiscord-rpc] Settings saved.");
+
+            // Finally close the application.
+            Console.WriteLine("[skdiscord-rpc] Shutting down...");
+            Environment.Exit(0);
+
+            // Clear current presence and dispose of the Discord client object.
+            //discordClient.Deinitialize();
+            //discordClient.ClearPresence();
+            //discordClient.Dispose();
+            //Console.WriteLine("[skdiscord-rpc] Discord client deinitialized and disposed.");
+
+            // Save any settings that have been changed.
+            //Properties.Settings.Default.Save();
+            //Console.WriteLine("[skdiscord-rpc] Settings saved.");
 
             // Hide the taskbar icon and dispose of it.
             // For some reason, the icon will sometimes linger in the tray bar. God knows why.
             // If you happen to have any leads, please feel free to open a pull request.
-            taskbarIcon.Visibility = Visibility.Hidden;
-            taskbarIcon.Icon.Dispose();
-            taskbarIcon.Dispose();
+            //taskbarIcon.Visibility = Visibility.Hidden;
+            //taskbarIcon.Icon.Dispose();
+            //taskbarIcon.Dispose();
+            //Console.WriteLine("[skdiscord-rpc] Taskbar icon disposed.");
 
             // Finally close the application.
-            Close();
-            Environment.Exit(0);
+            //Console.WriteLine("[skdiscord-rpc] Shutting down...");
+            //Environment.Exit(0);
         }
 
     }
