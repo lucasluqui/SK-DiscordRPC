@@ -7,8 +7,7 @@ SK-DiscordRPC isn't available as a standalone download and install. To use it yo
 ## Building
 1. Prerequisites
    - A device that runs Windows 10/11.
-   - [Visual Studio](https://visualstudio.microsoft.com/downloads/) installed.
-   - After Visual Studio installs, select the ".NET desktop development" workload and install it as well.
+   - [Visual Studio](https://visualstudio.microsoft.com/downloads/) installed. During the Visual Studio installation, select the ".NET desktop development" workload under "Desktop & Mobile" and install it as well.
 2. Clone the repository within Visual Studio. Get Started → Clone a repository.
 3. Open the `SK-DiscordRPC.sln` solution file.
 4. Build → Build Solution (or press CTRL + SHIFT + B).
