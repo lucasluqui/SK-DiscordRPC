@@ -1,10 +1,12 @@
-﻿using DiscordRPC;
-using SK_DiscordRPC.Data;
-using SK_DiscordRPC.Util;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+
+using DiscordRPC;
+
+using SK_DiscordRPC.Data;
+using SK_DiscordRPC.Util;
 
 namespace SK_DiscordRPC.Framework
 {
@@ -13,7 +15,7 @@ namespace SK_DiscordRPC.Framework
 
         private static string knightName = null;
 
-        private static void set(string detail, string largeImageKey, string largeImageDesc)
+        private static void set (string detail, string largeImageKey, string largeImageDesc)
         {
             if (Properties.Settings.Default.ShowKnight)
             {
@@ -45,25 +47,25 @@ namespace SK_DiscordRPC.Framework
             }
         }
 
-        public static void update()
+        public static void update ()
         {
             string detail = null;
             string largeImageKey = null;
             string largeImageDesc = null;
             knightName = Parser.parseKnightName();
-            Whereabout where = Parser.parseWhereabout();
-            string curIdent = AppWindow.curWhere.getIdent();
-            if (where.getIdent() != curIdent)
+            Whereabouts whereabouts = Parser.parseWhereabouts();
+            string currentIdent = AppWindow.currentWhereabouts.getIdent();
+            if (whereabouts.getIdent() != currentIdent)
             {
-                switch (where.getIdent())
+                switch (whereabouts.getIdent())
                 {
                     case IdentCodes.IDENT_GENERIC_CLOCKWORKS:
-                        if (curIdent != IdentCodes.IDENT_MISSION_LOBBY
-                            && curIdent != IdentCodes.IDENT_HOI_LOBBY
-                            && curIdent != IdentCodes.IDENT_GITM_LOBBY
-                            && curIdent != IdentCodes.IDENT_C42_LOBBY
-                            && curIdent != IdentCodes.IDENT_LOA_LOBBY
-                            && curIdent != IdentCodes.IDENT_DREAMS_AND_NIGHTMARES)
+                        if (currentIdent != IdentCodes.IDENT_MISSION_LOBBY
+                            && currentIdent != IdentCodes.IDENT_HOI_LOBBY
+                            && currentIdent != IdentCodes.IDENT_GITM_LOBBY
+                            && currentIdent != IdentCodes.IDENT_C42_LOBBY
+                            && currentIdent != IdentCodes.IDENT_LOA_LOBBY
+                            && currentIdent != IdentCodes.IDENT_DREAMS_AND_NIGHTMARES)
                         {
                             detail = "Travelling The Clockworks";
                             largeImageKey = ImageCodes.IMAGE_GENERIC_CLOCKWORKS;
@@ -417,9 +419,8 @@ namespace SK_DiscordRPC.Framework
                         return;
                 }
                 set(detail, largeImageKey, largeImageDesc);
-                AppWindow.curWhere = where;
+                AppWindow.currentWhereabouts = whereabouts;
             }
         }
-
     }
 }

@@ -1,19 +1,20 @@
-﻿using SK_DiscordRPC.Data;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
 
+using SK_DiscordRPC.Data;
+
 namespace SK_DiscordRPC.Util
 {
     class Parser
     {
         private static string logFile = Directory.GetCurrentDirectory() + "\\projectx.log";
-        public static Whereabout parseWhereabout()
+        public static Whereabouts parseWhereabouts ()
         {
-            Whereabout w = new Whereabout();
+            Whereabouts whereabouts = new Whereabouts();
 
             FileStream fs = new FileStream(logFile, FileMode.Open,
                     FileAccess.Read, FileShare.ReadWrite);
@@ -24,39 +25,39 @@ namespace SK_DiscordRPC.Util
                 {
                     if (line.Contains("moveTo"))
                     {
-                        string rawWhereabout = line.Split('(')[1].Replace(')', '\0').Replace(' ', '\0').Replace('.', '\0');
-                        string[] arrWhereabout = rawWhereabout.Split(',');
+                        string rawWhereabouts = line.Split('(')[1].Replace(')', '\0').Replace(' ', '\0').Replace('.', '\0');
+                        string[] arrWhereabouts = rawWhereabouts.Split(',');
                         
                         // Checks for guild halls
-                        if (arrWhereabout[0].Contains("4:"))
+                        if (arrWhereabouts[0].Contains("4:"))
                         {
-                            w.setIdent("4:4");
+                            whereabouts.setIdent("4:4");
                         }
                        
                         else
                         {
-                            w.setIdent(arrWhereabout[0]);
+                            whereabouts.setIdent(arrWhereabouts[0]);
                         }
                     }
 
                     if (line.Contains("ArenaSceneConfig"))
                     { 
-                        string rawArenaWhereabout = line.Split('%')[1].Split('/')[0];
-                        Console.WriteLine(rawArenaWhereabout);
-                        w.setIdent(rawArenaWhereabout);
+                        string rawArenaWhereabouts = line.Split('%')[1].Split('/')[0];
+                        Console.WriteLine(rawArenaWhereabouts);
+                        whereabouts.setIdent(rawArenaWhereabouts);
                     }
                 }
             }
-            return w;
+            return whereabouts;
         }
 
-        public static string parseKnightName()
+        public static string parseKnightName ()
         {
             string knightName = null;
             Process[] processlist = Process.GetProcesses();
             foreach (Process process in processlist)
             {
-                if (!String.IsNullOrEmpty(process.MainWindowTitle) && process.MainWindowTitle.Contains("Spiral"))
+                if (!String.IsNullOrEmpty(process.MainWindowTitle) && process.MainWindowTitle.Contains("Spiral Knights -"))
                 {
                     try
                     {
@@ -69,13 +70,13 @@ namespace SK_DiscordRPC.Util
             return knightName;
         }
 
-        public static bool isGameRunning()
+        public static bool isGameRunning ()
         {
             bool running = false;
             Process[] processlist = Process.GetProcesses();
             foreach (Process process in processlist)
             {
-                if (!String.IsNullOrEmpty(process.MainWindowTitle) && process.MainWindowTitle.Contains("Spiral Knights"))
+                if (!String.IsNullOrEmpty(process.MainWindowTitle) && process.MainWindowTitle.Contains("Spiral Knights -"))
                 {
                     running = true;
                 }

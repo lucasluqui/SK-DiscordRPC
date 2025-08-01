@@ -1,21 +1,21 @@
 ﻿using System;
 using System.Timers;
 using System.Windows;
+using System.Windows.Controls;
+
 using DiscordRPC;
 using DiscordRPC.Logging;
+
 using Hardcodet.Wpf.TaskbarNotification;
+
 using SK_DiscordRPC.Util;
 using SK_DiscordRPC.Data;
 using SK_DiscordRPC.Framework;
-using System.Windows.Controls;
 
 namespace SK_DiscordRPC
 {
     public partial class AppWindow : Window
-
     {
-        public static TaskbarIcon tb;
-
         public static DiscordRpcClient discordClient;
         private string DISCORD_CLIENT_ID = "626524043209867274";
 
@@ -23,17 +23,20 @@ namespace SK_DiscordRPC
         private Timer presenceTicker = new Timer(CHECK_INTERVAL_SECONDS * 1000);
         private Timer gameTicker = new Timer(CHECK_INTERVAL_SECONDS * 1000);
 
-        public static Whereabout curWhere = new Whereabout();
+        public static Whereabouts currentWhereabouts = new Whereabouts();
 
-        public AppWindow()
+        public static TaskbarIcon taskbarIcon;
+
+        public AppWindow ()
         {
             InitializeComponent();
-            tb = (TaskbarIcon)FindName("TrayIcon");
-            tb.ShowBalloonTip("Now running in tray bar", "You can configure or exit the module there.", BalloonIcon.None);
+            taskbarIcon = (TaskbarIcon) FindName("TrayIcon");
+            taskbarIcon.ShowBalloonTip(
+                "Now running in tray bar", "You can configure or exit the module there.", BalloonIcon.None);
 
             if (Properties.Settings.Default.ShowKnight)
             {
-                ShowKnightItem = (MenuItem)FindName("ShowKnightItem");
+                ShowKnightItem = (MenuItem) FindName("ShowKnightItem");
                 ShowKnightItem.IsChecked = true;
             }
 
@@ -47,17 +50,17 @@ namespace SK_DiscordRPC
             }
         }
 
-        public void SetupRPC()
+        public void SetupRPC ()
         {
             discordClient = new DiscordRpcClient(DISCORD_CLIENT_ID);
             discordClient.Logger = new ConsoleLogger() { Level = LogLevel.Warning };
             discordClient.OnReady += (sender, e) =>
             {
-                Console.WriteLine("ready received for: {0}", e.User.Username);
+                Console.WriteLine("[skdiscord-rpc] ready received for: {0}", e.User.Username);
             };
             discordClient.OnPresenceUpdate += (sender, e) =>
             {
-                Console.WriteLine("updated: {0}", e.Presence);
+                Console.WriteLine("[skdiscord-rpc] updated: {0}", e.Presence);
             };
             discordClient.Initialize();
             discordClient.SetPresence(new RichPresence()
@@ -74,23 +77,23 @@ namespace SK_DiscordRPC
                 }
             });
 
-            if(gameTicker.Enabled) { gameTicker.Dispose(); }
+            if (gameTicker.Enabled) { gameTicker.Dispose(); }
             InitPresenceTicker();
         }
 
-        public void InitGameTicker()
+        public void InitGameTicker ()
         {
             gameTicker.Elapsed += OnGameTimedEvent;
             gameTicker.Enabled = true;
         }
 
-        public void InitPresenceTicker()
+        public void InitPresenceTicker ()
         {
             presenceTicker.Elapsed += OnPresenceTimedEvent;
             presenceTicker.Enabled = true;
         }
 
-        private void OnGameTimedEvent(object sender, EventArgs e)
+        private void OnGameTimedEvent (object sender, EventArgs e)
         {
             if (Parser.isGameRunning())
             {
@@ -98,7 +101,7 @@ namespace SK_DiscordRPC
             }
         }
 
-        private void OnPresenceTimedEvent(object sender, EventArgs e)
+        private void OnPresenceTimedEvent (object sender, EventArgs e)
         {
             if (Parser.isGameRunning())
             {
@@ -106,16 +109,16 @@ namespace SK_DiscordRPC
             }
             else
             {
-                shutdownRoutine();
+                shutdown();
             }
         }
 
-        private void Exit_Click(object sender, RoutedEventArgs e)
+        private void Exit_Click (object sender, RoutedEventArgs e)
         {
-            shutdownRoutine();
+            shutdown();
         }
 
-        private void ShowKnight_Click(object sender, RoutedEventArgs e)
+        private void ShowKnight_Click (object sender, RoutedEventArgs e)
         {
             if (Properties.Settings.Default.ShowKnight)
             {
@@ -131,20 +134,23 @@ namespace SK_DiscordRPC
             }
         }
 
-        private void shutdownRoutine() { 
+        private void shutdown () { 
+            // Dispose of the presence ticker.
             presenceTicker.Dispose();
 
+            // Dispose of the Discord Client object.
             discordClient.Deinitialize();
             discordClient.Dispose();
 
+            // Save any settings that have been changed.
             Properties.Settings.Default.Save();
 
-            tb.Visibility = Visibility.Hidden;
-            tb.Icon.Dispose();
-            tb.Dispose();
+            taskbarIcon.Visibility = Visibility.Hidden;
+            taskbarIcon.Icon.Dispose();
+            taskbarIcon.Dispose();
 
+            // Finally close the application.
             Close();
-
             Environment.Exit(0);
         }
 
