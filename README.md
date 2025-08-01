@@ -1,5 +1,5 @@
 # SK-DiscordRPC
-[Discord RPC](https://discord.com/developers/docs/topics/rpc) implementation to interface with the game Spiral Knights and post live game info onto your Discord status, bundled with [Knight Launcher](https://github.com/lucasluqui/KnightLauncher) as one of it's modules. Windows only.
+[Discord RPC](https://discord.com/developers/docs/topics/rpc) implementation to interface with the game Spiral Knights and post live game info onto your Discord status, bundled with [Knight Launcher](https://github.com/lucasluqui/KnightLauncher) as one of its modules. Windows only.
 
 ## Downloading
 SK-DiscordRPC isn't available as a standalone download and install. To use it you must download [Knight Launcher](https://github.com/lucasluqui/KnightLauncher) and enable the "Discord Integration" setting in its Settings menu.
