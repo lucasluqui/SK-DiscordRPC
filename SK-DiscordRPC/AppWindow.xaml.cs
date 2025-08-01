@@ -173,6 +173,9 @@ namespace SK_DiscordRPC
             Console.WriteLine("[skdiscord-rpc] Shutting down...");
             Environment.Exit(0);
 
+            // Breakthrough: If you don't do anything below, everything works fine.
+            // Why? I don't know. But it does.
+
             // Clear current presence and dispose of the Discord client object.
             //discordClient.Deinitialize();
             //discordClient.ClearPresence();
