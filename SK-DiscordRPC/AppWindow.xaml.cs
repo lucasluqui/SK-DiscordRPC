@@ -16,6 +16,7 @@ namespace SK_DiscordRPC
     public partial class AppWindow : Window
     {
         public static string KL_VERSION = "undefined";
+        public static string RPC_VERSION = "undefined";
 
         public static DiscordRpcClient discordClient;
         private string DISCORD_CLIENT_ID = "626524043209867274";
@@ -65,6 +66,10 @@ namespace SK_DiscordRPC
             var writer = new StreamWriter(logFile) { AutoFlush = true };
             Console.SetOut(writer);
             Console.SetError(writer);
+
+            System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
+            RPC_VERSION = AssemblyName.GetAssemblyName(assembly.Location).Version.ToString();
+            Console.WriteLine("[skdiscord-rpc] Started. KL version: " + KL_VERSION + ", RPC version: " + RPC_VERSION);
         }
 
         public void SetupRPC ()

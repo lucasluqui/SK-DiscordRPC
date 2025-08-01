@@ -27,7 +27,7 @@ namespace SK_DiscordRPC.Framework
                 {
                     Type = ActivityType.Playing,
                     Details = detail,
-                    State = "(KL v" + AppWindow.KL_VERSION + ", RPC v" + AssemblyName.GetAssemblyName(assembly.Location).Version.ToString() + ")",
+                    State = "(KL v" + AppWindow.KL_VERSION + ", RPC v" + AppWindow.RPC_VERSION + ")",
                     Timestamps = Timestamps.Now,
                     Assets = new Assets()
                     {
@@ -51,7 +51,7 @@ namespace SK_DiscordRPC.Framework
                 {
                     Type = ActivityType.Playing,
                     Details = detail,
-                    State = "(KL v" + AppWindow.KL_VERSION + ", RPC v" + AssemblyName.GetAssemblyName(assembly.Location).Version.ToString() + ")",
+                    State = "(KL v" + AppWindow.KL_VERSION + ", RPC v" + AppWindow.RPC_VERSION + ")",
                     Timestamps = Timestamps.Now,
                     Assets = new Assets()
                     {
