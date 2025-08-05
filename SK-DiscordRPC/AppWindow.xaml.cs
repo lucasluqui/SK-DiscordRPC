@@ -15,7 +15,7 @@ namespace SK_DiscordRPC
 {
     public partial class AppWindow : Window
     {
-        public static string RPC_VERSION = "1.0.0";
+        public static string RPC_VERSION = "1.0.1";
         public static string KL_VERSION = "undefined";
 
         public static DiscordRpcClient discordClient;
