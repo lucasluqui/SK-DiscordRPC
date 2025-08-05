@@ -19,15 +19,13 @@ namespace SK_DiscordRPC.Framework
 
         private static void set (string detail, string largeImageKey, string largeImageDesc)
         {
-            System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
-
             if (Properties.Settings.Default.ShowKnight)
             {
                 AppWindow.discordClient.SetPresence(new RichPresence()
                 {
                     Type = ActivityType.Playing,
                     Details = detail,
-                    State = "(KL v" + AppWindow.KL_VERSION + ", RPC v" + AppWindow.RPC_VERSION + ")",
+                    State = "(KL v" + AppWindow.KL_VERSION + ")",
                     Timestamps = Timestamps.Now,
                     Assets = new Assets()
                     {
@@ -51,7 +49,7 @@ namespace SK_DiscordRPC.Framework
                 {
                     Type = ActivityType.Playing,
                     Details = detail,
-                    State = "(KL v" + AppWindow.KL_VERSION + ", RPC v" + AppWindow.RPC_VERSION + ")",
+                    State = "(KL v" + AppWindow.KL_VERSION + ")",
                     Timestamps = Timestamps.Now,
                     Assets = new Assets()
                     {
